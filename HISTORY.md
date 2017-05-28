@@ -282,3 +282,13 @@ Folder *7 (toBeDeveloped_aFewHints)* is no more useful and has not reported (but
 Transition notes into the file *from2to3.md* with a technical part dedicated to a **digression on methods and functions** in Python 3
 
 Fixing also .txtx file translation
+
+(2017 05 25)
+
+3.0 PEP8
+
+Applying the PEP8, Style Guide for Python Code, [https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/)
+
+We used the program [autopep8](https://pypi.python.org/pypi/autopep8) via terminal, with:
+
+    autopep8 —in-place -a -a <filename>

@@ -1,5 +1,6 @@
-#start 1 plainProgrammingBug.py
+# start 1 plainProgrammingBug.py
 import random
+
 
 def SimpleBug():
 
@@ -20,8 +21,11 @@ def SimpleBug():
         print ("I moved to X = ", xPos, " Y = ", yPos)
 
 # returns -1, 0, 1  with equal probability
+
+
 def randomMove():
     return random.randint(-1, 1)
+
 
 SimpleBug()
 

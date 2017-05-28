@@ -291,4 +291,4 @@ Applying the PEP8, Style Guide for Python Code, [https://www.python.org/dev/peps
 
 We used the program [autopep8](https://pypi.python.org/pypi/autopep8) via terminal, with:
 
-    autopep8 —in-place -a -a <filename>
+    autopep8 --in-place -a -a <filename>

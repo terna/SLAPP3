@@ -4,3 +4,13 @@
 *  avoid the need of *penPosition.py* when not used by a project  
 
 *  in the handbook, clarify the usefulness of having polymorphic agents  
+
+---
+
+PEP8
+
+for names with blancs, cp to a simple tmp name
+
+done:
+runShell.py and start.py
+folder 1

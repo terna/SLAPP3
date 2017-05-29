@@ -13,4 +13,5 @@ for names with blancs, cp to a simple tmp name
 
 done:
 runShell.py and start.py
-folder 1
+folder 1*
+folder 2*

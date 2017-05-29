@@ -1,8 +1,9 @@
-#ActionGroup.py
+# ActionGroup.py
 from Tools import *
 
+
 class ActionGroup:
-    def __init__(self, groupName = " "): # the name is optional
+    def __init__(self, groupName=" "):  # the name is optional
         self.groupName = groupName
 
     # reporting name
@@ -13,4 +14,3 @@ class ActionGroup:
     # by the agents, in the form
 
     # exec("instruction 1; instruction 2; ...")
-

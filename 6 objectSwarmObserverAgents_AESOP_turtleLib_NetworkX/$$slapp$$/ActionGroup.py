@@ -1,16 +1,16 @@
-#ActionGroup.py
+# ActionGroup.py
 from Tools import *
 
+
 class ActionGroup:
-    def __init__(self, groupName = " "): # the name is optional
+    def __init__(self, groupName=" "):  # the name is optional
         self.groupName = groupName
-        self.localCode=""
+        self.localCode = ""
 
     # setting name
     def setName(self, name):
         self.groupName = name
-    
+
     # reporting name
     def getName(self):
         return self.groupName
-

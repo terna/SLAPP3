@@ -9,7 +9,7 @@
 
 PEP8
 
-for names with blancs, cp to a simple tmp name
+for names with blancs, cp to a simpler tmp name
 
 done:
 runShell.py and start.py
@@ -19,3 +19,4 @@ folder 3...
 folder 4...
 folder 5...
 folder 6.../$$slapp$$ (with handmade corrections about tyy blocks in Tools.py)
+folder 6.../basic

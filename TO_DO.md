@@ -22,3 +22,4 @@ folder 6.../$$slapp$$ (with handmade corrections about tyy blocks in Tools.py)
 folder 6.../basic
 folder 6.../basic2classes
 folder 6.../basic2SpecialAction
+folder 6.../debug

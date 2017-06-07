@@ -1,7 +1,7 @@
-#commonVar.py
+# commonVar.py
 
 projectVersion = 1.3
 
-toBeExecuted="print ('Goodbye')"
+toBeExecuted = "print ('Goodbye')"
 
-specialAction="makeSpecialAction()"
+specialAction = "makeSpecialAction()"

@@ -1,18 +1,18 @@
-#NewAgent.py
+# NewAgent.py
 from Tools import *
 from agTools import *
 from Agent import *
 
-class OtherAgent(Agent):
-    def __init__(self, number,myWorldState,
-                 xPos, yPos, lX =-20,rX=19, bY=-20,tY=19, agType=""):
 
-        Agent.__init__(self, number,myWorldState,
-                     xPos, yPos, lX =-20,rX=19, bY=-20,tY=19, agType=agType)
+class OtherAgent(Agent):
+    def __init__(self, number, myWorldState,
+                 xPos, yPos, lX=-20, rX=19, bY=-20, tY=19, agType=""):
+
+        Agent.__init__(self, number, myWorldState,
+                       xPos, yPos, lX=-20, rX=19, bY=-20, tY=19, agType=agType)
         # it is anyway possible to initilize the environment directly,
         # commenting the call above to the super class and uncommenting
         # the rows below
-
 
         """
         # the environment
@@ -35,13 +35,12 @@ class OtherAgent(Agent):
         # order to the superclass
         """
 
-
     # sleeping
-    def sleep(self,**d):
-        print("I'm %s agent # %d: " % (self.agType,self.number), end=' ')
+    def sleep(self, **d):
+        print("I'm %s agent # %d: " % (self.agType, self.number), end=' ')
         print("happy to sleep!")
 
     # movement
-    def randomMovement(self,**k):
-        print("I'm %s agent # %d: " % (self.agType,self.number), end=' ')
+    def randomMovement(self, **k):
+        print("I'm %s agent # %d: " % (self.agType, self.number), end=' ')
         print("absolutely not moving!!!")

@@ -8,5 +8,5 @@ import start
 
 start.runSLAPP()
 
-os.chdir(start.start_pyDir) # folder of start.py
+os.chdir(start.start_pyDir)  # folder of start.py
 os.chdir("..")              # folder of runShell.py

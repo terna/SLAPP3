@@ -1,19 +1,21 @@
 import commonVar as common
 
+
 class SuperAgent(object):
 
     # add an operating set
-    def setAnOperatingSet(self,aSet):
+    def setAnOperatingSet(self, aSet):
         self.agOperatingSets.append(aSet)
 
     # create the list of all the sets (with the original one too)
     # in which we can find the agent
     def setContainers(self):
-        self.containers=self.getOperatingSetList()+[self.getAgentType(),\
-                                                    "all"]
+        self.containers = self.getOperatingSetList() + [self.getAgentType(),
+                                                        "all"]
     # set the agentList here
-    def setAgentList(self,agentList):
-        self.agentList=agentList
+
+    def setAgentList(self, agentList):
+        self.agentList = agentList
 
     # get operating set list
     def getOperatingSetList(self):
@@ -25,14 +27,14 @@ class SuperAgent(object):
 
     # reset values
     def setNewCycleValues(self):
-        pass # here is only reported for future uses
-             # or to be redefined in Agent.py of a specific project
+        pass  # here is only reported for future uses
+        # or to be redefined in Agent.py of a specific project
 
     # get operating agent type
     def getAgentType(self):
         return self.agType
 
-    #OBSOLETE methods
+    # OBSOLETE methods
 
     # methods for Tk graphic applications
     def getXPos(self):
@@ -42,7 +44,7 @@ class SuperAgent(object):
         return self.yPos
 
     def setGraphicItem(self, grI):
-        self.graphicItem=grI
+        self.graphicItem = grI
 
     def getGraphicItem(self):
         return self.graphicItem

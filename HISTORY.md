@@ -283,7 +283,7 @@ Transition notes into the file *from2to3.md* with a technical part dedicated to 
 
 Fixing also .txtx file translation
 
-(2017 05 25)
+(2017 06 07)
 
 3.0.1
 

@@ -285,10 +285,12 @@ Fixing also .txtx file translation
 
 (2017 05 25)
 
-3.0 PEP8
+3.0.1
 
-Applying the PEP8, Style Guide for Python Code, [https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/)
+Applying PEP8, the  [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
 
 We used the program [autopep8](https://pypi.python.org/pypi/autopep8) via terminal, with:
 
     autopep8 --in-place -a -a <filename>
+
+and a few handmade corrections

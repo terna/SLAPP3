@@ -2,6 +2,7 @@
 # into the display
 from Pen import *
 
+
 def setPen(address):
-    address.p=Pen(0,0)
-    address.p.white(-200,150)
+    address.p = Pen(0, 0)
+    address.p.white(-200, 150)

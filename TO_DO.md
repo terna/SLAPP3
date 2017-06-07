@@ -24,3 +24,4 @@ folder 6.../basic2classes
 folder 6.../basic2SpecialAction
 folder 6.../debug
 folder 6.../production
+folder 5.../school

@@ -1,2 +1,3 @@
 xlrd
 matplotlib
+python3-tk

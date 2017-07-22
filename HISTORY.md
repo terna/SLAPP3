@@ -295,6 +295,8 @@ We used the program [autopep8](https://pypi.python.org/pypi/autopep8) via termin
 
 and a few handmade corrections
 
+(2017 07 22)
+
 3.0.2
 
-adapting to work also without TkInter, in case with limitations, to run also online in [beta.mybinder.org](beta.mybinder.org), in the future simply  [beta.mybinder.org](beta.mybinder.org)
+adapting to work also without TkInter, in case with limitations, to run also online in [beta.mybinder.org](beta.mybinder.org), in the future simply [mybinder.org](mybinder.org)

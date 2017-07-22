@@ -4,7 +4,14 @@ from Tools import *
 from Agent import *
 from ActionGroup import *
 from oActions import *
-from Pen import *
+
+try:
+    import tkinter # this is only a control, if tkinter is missing, we cannot
+                   # import Pen
+    from Pen import *
+except BaseException:
+    print("Warning, missing tkinter: Turle class will not work")
+
 import penPosition
 try:
     import graphicDisplayGlobalVarAndFunctions as gvf

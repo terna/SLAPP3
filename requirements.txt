@@ -1,2 +1,5 @@
 xlrd
 matplotlib
+networkx
+pandas
+scipy

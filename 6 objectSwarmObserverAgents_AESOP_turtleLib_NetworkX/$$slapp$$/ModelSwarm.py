@@ -11,7 +11,15 @@ from ActionGroup import *
 import random
 import os
 from mActions import *
-from turtle import *
+
+try:
+    import tkinter # this is only a control, if tkinter is missing, we cannot
+                   # import turtle
+    from turtle import *
+except BaseException:
+    print("Warning, missing tkinter: Turle class will not work")
+
+
 
 # structure for adding and eliminating tasks
 common.addTasks = {}

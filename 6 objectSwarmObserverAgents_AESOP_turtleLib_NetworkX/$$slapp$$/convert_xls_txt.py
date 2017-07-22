@@ -4,7 +4,15 @@
 
 
 import os
-import turtle
+
+try:
+    import tkinter # this is only a control, if tkinter is missing, we cannot
+                   # import turtle
+    from turtle import *
+except BaseException:
+    print("Warning, missing tkinter: Turle class will not work")
+
+#import turtle
 
 # project='school' or 'production' # to run tests
 
@@ -57,7 +65,8 @@ def out_table(sh, book, f, rec):  # !!!!!!!!!!
                             c +
                             1) +
                         "' missing")
-                    turtle.bye()  # does not create problems if the graphic space is missing
+                    #turtle.bye()  # does not create problems if the graphic space is missing
+                    bye()  # does not create problems if the graphic space is missing
                     os.sys.exit(1)
                 sh_macro = book.sheet_by_index(book.sheet_names()
                                                .index(sh.cell_value(r, c + 1)))
@@ -100,7 +109,8 @@ if "schedule.xls" in files:
     sh = book.sheet_by_index(0)
     if book.sheet_names()[0] != "schedule":
         print("Error, first sheet in schedule.txt has to be named 'schedule'")
-        turtle.bye()
+        #turtle.bye()
+        bye()
         os.sys.exit(1)
     out_table(sh, book, f, 1)
     f.close()

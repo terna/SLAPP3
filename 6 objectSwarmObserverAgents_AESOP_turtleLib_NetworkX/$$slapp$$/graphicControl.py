@@ -44,7 +44,15 @@ def graphicControl():
     if IPython:
         from IPython import get_ipython
         import matplotlib
-        matplotlib.use("TkAgg")
+
+        try:
+            import tkinter # this is only a control, if tkinter is missing, the
+                           # use("TkAgg") method will rise an error
+            matplotlib.use("TkAgg")
+        except BaseException:
+            print("Warning, missing tkinter: graphics will not work with")
+            print("Jupyter in terminal or QtConsole")
+
         import matplotlib as mpl
         import matplotlib.pyplot as plt
 

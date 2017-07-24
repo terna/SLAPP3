@@ -300,3 +300,11 @@ and a few handmade corrections
 3.0.2
 
 adapting to work also without TkInter, in case with limitations, to run also online in [beta.mybinder.org](beta.mybinder.org), in the future simply [mybinder.org](mybinder.org)
+
+(2017 07 24)
+
+3.0.3
+
+adding the oligopoly project as a new example (version 5bPy3)
+
+modified the .ipynb files to adapt them to the use with Binder or without it

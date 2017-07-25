@@ -3,9 +3,9 @@ Click on iRunShellOnline.ipynb to launch the simulation shell.
 
 For advanced users:
 
-(i) [July 2017, tmp not working] with New/Terminal from the entry online page
+(i) with New/Terminal from the entry online page
 (file system view), you can directly work in a virtual machine (with a
-bash shell);
+bash shell); use Firefox to be sure that the terminal works;
 
 (ii) opening a .txt or .py file via the entry online page (file system view)
 you can edit and save it (in your tmp environment);

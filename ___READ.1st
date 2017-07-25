@@ -1,16 +1,16 @@
-click on iRunShellOnline.ipynb to launch the simulation shell
+Click on iRunShellOnline.ipynb to launch the simulation shell.
 
 
-For advanced users
+For advanced users:
 
-(i) [Juy 2017, tmp not working] with New/Terminal from the entry online page
+(i) [July 2017, tmp not working] with New/Terminal from the entry online page
 (file system view), you can directly work in a virtual machine (with a
 bash shell);
 
 (ii) opening a .txt or .py file via the entry online page (file system view)
 you can edit and save it (in your tmp environment);
 
-(iii) the button Upload in the entry online page allows you to upload files;
+(iii) the button Upload in the entry online page allows you to upload files.
 
 
 

@@ -137,6 +137,15 @@ class ObserverSwarm:
                 if not found:
                     found = otherSubSteps(subStep, self)
 
+                if subStep == "specialAction":
+                    found=True
+                    #print "**",common.specialAction
+                    try:
+                        tmp=common.specialAction
+                    except: tmp=""
+                    #print "***",tmp
+                    exec(tmp)
+
                 if subStep == "end":
                     found = True
                     self.actionGroup3.do(self)

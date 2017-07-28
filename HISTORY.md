@@ -308,3 +308,10 @@ adapting to work also without TkInter, in case with limitations, to run also onl
 adding the oligopoly project as a new example (version 5bPy3)
 
 modified the .ipynb files to adapt them to the use with Binder or without it
+
+(2017 07 28)
+
+3.0.4
+
+fixed the specialAction feature (with the basicSpecialAction example), broken
+with the conversion from Python 2 to Python 3 

@@ -314,4 +314,15 @@ modified the .ipynb files to adapt them to the use with Binder or without it
 3.0.4
 
 fixed the specialAction feature (with the basicSpecialAction example), broken
-with the conversion from Python 2 to Python 3 
+with the conversion from Python 2 to Python 3
+
+(2017 09 05)
+
+3.0.5
+
+in Tools.py the functions askEachAgentInCollection, askEachAgentInCollectionAndExecLocalCode, askAgent, and askAgentAndExecLocalCode
+were canceling the effect of an *os.sys.exit(1)* operation raised in the method
+under execution (if debug==False)
+
+fixed duplicating the *except* condition, with *except SystemExit* in first
+position to repeat the *os.sys.exit(1)* action

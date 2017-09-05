@@ -113,6 +113,10 @@ def askEachAgentInCollection(collection, method, **k):
         else:
             try:
                 applyMethod(a, method, **k)
+            except SystemExit:
+                print('method', method,'raising an exit condition while '+\
+                      'acting on agent number', a.number, 'of type ', a.agType)
+                os.sys.exit(1)
             except BaseException:
                 print('cannot apply (case 0) method', method,
                       'to agent number', a.number, 'of type ', a.agType)
@@ -137,6 +141,10 @@ def askEachAgentInCollectionAndExecLocalCode(collection, method, **k):
         else:
             try:
                 applyMethod(a, method, **k)
+            except SystemExit:
+                print('method', method,'raising an exit condition while '+\
+                      'acting on agent number', a.number, 'of type ', a.agType)
+                os.sys.exit(1)
             except BaseException:
                 print('cannot apply (case 1) method', method,
                       'to agent number', a.number, 'of type ', a.agType)
@@ -155,6 +163,10 @@ def askAgent(agent, method, **k):
     else:
         try:
             applyMethod(agent, method, **k)
+        except SystemExit:
+            print('method', method,'raising an exit condition while '+\
+                  'acting on agent number', a.number, 'of type ', a.agType)
+            os.sys.exit(1)
         except BaseException:
             print('cannot apply (case 2) method', method, 'to agent number',
                   a.number)
@@ -172,6 +184,10 @@ def askAgentAndExecLocalCode(agent, method, **k):
     else:
         try:
             applyMethod(agent, method, **k)
+        except SystemExit:
+            print('method', method,'raising an exit condition while '+\
+                  'acting on agent number', a.number, 'of type ', a.agType)
+            os.sys.exit(1)
         except BaseException:
             print('cannot apply (case 3) method', method, 'to agent number',
                   a.number)

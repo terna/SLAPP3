@@ -498,6 +498,9 @@ class ModelSwarm:
                 else:
                     try:
                         exec("askEachAgentInCollection(localList,task[2])")
+                    except SystemExit:
+                        print('method', task[2],'raising an exit condition')
+                        os.sys.exit(1)
                     except BaseException:
                         print("Warning, method", task[2], "does not exist")
             else:
@@ -507,6 +510,9 @@ class ModelSwarm:
                 else:
                     try:
                         exec("askEachAgentInCollection(localList,task[1])")
+                    except SystemExit:
+                        print('method', task[1],'raising an exit condition')
+                        os.sys.exit(1)
                     except BaseException:
                         print("Warning, method", task[1], "does not exist")
 
@@ -519,6 +525,9 @@ class ModelSwarm:
                 else:
                     try:
                         exec("askEachAgentInCollection(localList,task[2])")
+                    except SystemExit:
+                        print('method', task[2],'raising an exit condition')
+                        os.sys.exit(1)
                     except BaseException:
                         print("Warning, method", task[2], "does not exist")
             else:
@@ -528,6 +537,9 @@ class ModelSwarm:
                 else:
                     try:
                         exec("askEachAgentInCollection(localList,task[1])")
+                    except SystemExit:
+                        print('method', task[1],'raising an exit condition')
+                        os.sys.exit(1)
                     except BaseException:
                         print("Warning, method", task[1], "does not exist")
 

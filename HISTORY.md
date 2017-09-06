@@ -326,3 +326,5 @@ under execution (if debug==False)
 
 fixed duplicating the *except* condition, with *except SystemExit* in first
 position to repeat the *os.sys.exit(1)* action
+
+the same in ModelSwarm.py when applying methods via the functions of Tools.py 

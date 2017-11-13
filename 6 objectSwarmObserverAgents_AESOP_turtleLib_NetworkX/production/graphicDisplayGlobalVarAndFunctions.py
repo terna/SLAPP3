@@ -210,7 +210,7 @@ def drawGraph():
     # networkx.algorithms.centrality.closeness_centrality.html
     print()
     print("closeness_centrality")
-    common.clsn = nx.closeness_centrality(common.g, normalized=False)
+    common.clsn = nx.closeness_centrality(common.g)
     # print clsn
     for i in range(len(common.orderedListOfNodes)):
         print(common.orderedListOfNodes[i].number,

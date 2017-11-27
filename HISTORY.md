@@ -334,3 +334,9 @@ the same in ModelSwarm.py when applying methods via the functions of Tools.py
 3.0.6
 
 adapted *production* project to the version 2.0 of NetworkX
+
+(2017 11 27)
+
+3.0.7
+
+adapted *production* project again to the version 2.0 of NetworkX

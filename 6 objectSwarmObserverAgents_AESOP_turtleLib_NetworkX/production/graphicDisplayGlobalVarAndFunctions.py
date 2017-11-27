@@ -108,7 +108,11 @@ def pruneEdges():
 
     print("New threshold to prune: < %d" % common.pruneThreshold)
 
-    edges = common.g.edges()
+    #edges=common.g.edges() modified with NetworkX 2.0
+    edges=[]
+    for anE in common.g.edges():
+        edges.append(anE)
+
     print("weights of the links")
     for anEdge in edges:
         u = anEdge[0].number

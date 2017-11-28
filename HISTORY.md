@@ -335,8 +335,11 @@ the same in ModelSwarm.py when applying methods via the functions of Tools.py
 
 adapted *production* project to the version 2.0 of NetworkX
 
-(2017 11 27)
+(2017 11 28)
 
 3.0.7
 
 adapted *production* project again to the version 2.0 of NetworkX
+
+updated requirements.txt, addying statsmodels and patsy
+for readingCsvOutput.ipynb in oligopoly model

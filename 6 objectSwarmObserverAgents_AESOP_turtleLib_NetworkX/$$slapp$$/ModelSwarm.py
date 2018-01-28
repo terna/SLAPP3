@@ -10,6 +10,7 @@ except BaseException:
 from ActionGroup import *
 import random
 import os
+import numpy as np
 from mActions import *
 
 try:
@@ -301,18 +302,21 @@ class ModelSwarm:
                     # apply method only to a part of the list, or, which is the
                     # same, with the given probability to each element of the
                     # list
-                    self.share = 0
+                    self.share = np.nan
                     try:
                         self.share = float(task[1])  # does task[1] contains
-                        # a int or float number?
+                        # an int or float number?
                     except BaseException:
                         pass
 
-                    if self.share > 0:
+                    if self.share >= 0:
                         tmpList = localList[:]
                         del localList[:]
                         for i in range(len(tmpList)):
-                            if random.random() <= self.share:
+                            if random.random() < self.share: # < to avoid the
+                                                             # extreme case if
+                                                             # self.share is 0
+
                                 localList.append(tmpList[i])
 
                     # in case, an abs. number of agent *(-1)
@@ -341,18 +345,20 @@ class ModelSwarm:
                     # always the same sequence
                     random.shuffle(localList)
                     # apply method only to a share of the list
-                    self.share = 0
+                    self.share = np.nan
                     try:
                         self.share = float(task[1])   # does task[1] contains
                         # an int or float number?
                     except BaseException:
                         pass
 
-                    if self.share > 0:
+                    if self.share >= 0:
                         tmpList = localList[:]
                         del localList[:]
                         for i in range(len(tmpList)):
-                            if random.random() <= self.share:
+                            if random.random() < self.share: # < to avoid the
+                                                             # extreme case if
+                                                             # sef.share is 0
                                 localList.append(tmpList[i])
 
                     # in case, an abs. number of agent *(-1)
@@ -371,7 +377,7 @@ class ModelSwarm:
                         self.applyFromSchedule(localList, task)
 
                 if task[0] == 'WorldState':
-                    # self.share=0
+                    # self.share=np.nan
                     if address.worldState == 0:
                         print(
                             "WorldState.py is missing, you cannot use WorldState here.")
@@ -407,17 +413,18 @@ class ModelSwarm:
             if subStep == "read_script":
                 found = True
                 if self.ff == "":
-                    # create the dictionary of methods probability. if any
+                    # create the dictionary of method probabilities. if any
                     try:
                         schedule = open(project + "/schedule.txt", "r")
                         common.methodProbs = {}
                         for line in schedule:
                             lineSplit = line.split()
                             if len(lineSplit) == 3 and lineSplit[1].find(
-                                    '.') > 0:
-                                if float(lineSplit[1]) > 0:
-                                    common.methodProbs[lineSplit[2]] = float(
-                                        lineSplit[1])
+                                    '.') >= 0:
+                                 if lineSplit[2] not in common.methodProbs:
+                                     common.methodProbs[lineSplit[2]] = []
+                                 common.methodProbs[lineSplit[2]].append(float(
+                                        lineSplit[1]))
                         if common.methodProbs != {}:
                             print("methodProbabilities =", common.methodProbs)
                         schedule.close()
@@ -487,10 +494,13 @@ class ModelSwarm:
 
         # if task[0] is 'all' or a type of agent
         if check(task[0], self.types, self.operatingSets):
-            if self.share != 0:
+            #https://stackoverflow.com/questions/1565164/what-
+            #is-the-rationale-for-all-comparisons-returning-false-
+            #for-ieee754-nan-values
+            if id(self.share) != id(np.nan):
                     # NOTE *** the ask with Agent.method in the form
                     # "askEachAgentInCollection(localList,Agent"+"."+task[2]+")" is
-                    # still operating for old calls in mActions.py modules nut it is
+                    # still operating for old calls in mActions.py modules but it is
                     # deprecated here, confusing the execution in presence of
                     # subclasses of Agent
                 if common.debug:
@@ -518,7 +528,7 @@ class ModelSwarm:
 
         # if task[0] is an opSet
         if task[0] in self.operatingSets:
-            if self.share != 0:
+            if id(self.share) != id(np.nan):
                 # see NOTE *** above
                 if common.debug:
                     exec("askEachAgentInCollection(localList,task[2])")

@@ -343,3 +343,9 @@ adapted *production* project again to the version 2.0 of NetworkX
 
 updated requirements.txt, addying statsmodels and patsy
 for readingCsvOutput.ipynb in oligopoly model
+
+(2018 01 28)
+
+3.0.8
+
+in SLAPP3 a 0 probability of the execution of a method is now working

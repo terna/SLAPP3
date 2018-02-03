@@ -423,8 +423,11 @@ class ModelSwarm:
                                     '.') >= 0:
                                  if lineSplit[2] not in common.methodProbs:
                                      common.methodProbs[lineSplit[2]] = []
-                                 common.methodProbs[lineSplit[2]].append(float(
-                                        lineSplit[1]))
+                                 if not float(lineSplit[1]) in \
+                                        common.methodProbs[lineSplit[2]] and \
+                                    not float(lineSplit[1]) < 0:
+                                          common.methodProbs[lineSplit[2]].\
+                                          append(float(lineSplit[1]))
                         if common.methodProbs != {}:
                             print("methodProbabilities =", common.methodProbs)
                         schedule.close()
@@ -435,6 +438,8 @@ class ModelSwarm:
                         self.ff = open(project + "/schedule.txt", "r")
                     except BaseException:
                         pass
+
+
                 self.actionGroup100.do(self, cycle)
                 # self here is the model env.
                 # not added automatically

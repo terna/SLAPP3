@@ -349,3 +349,7 @@ for readingCsvOutput.ipynb in oligopoly model
 3.0.8
 
 in SLAPP3 a 0 probability of the execution of a method is now working
+
+3.0.9
+
+improved the report of method probabilities starting the execution

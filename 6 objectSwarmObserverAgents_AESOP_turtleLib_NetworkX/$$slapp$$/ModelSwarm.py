@@ -18,7 +18,7 @@ try:
                    # import turtle
     from turtle import *
 except BaseException:
-    print("Warning, missing tkinter: Turle class will not work")
+    print("Warning, missing tkinter: Turtle class will not work")
 
 
 

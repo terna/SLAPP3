@@ -12,7 +12,7 @@
 
 def runSLAPP():
     global start_pyDir
-    print("\nSLAPP v3.0.9 build 20180429\n")
+    print("\nSLAPP v3.0.9 build 20180527\n")
     import os
 
     confirm = "n"
@@ -99,13 +99,14 @@ def runSLAPP():
         print("debug =", common.debug)
 
         observerSwarm = obs.ObserverSwarm(project)
+        common.pro = project  # to be used within the oActions.py and
+                              # mActions.py extensions
 
         # create objects
         observerSwarm.buildObjects()
 
         # create actions
         observerSwarm.buildActions()
-        common.pro = project  # to be used within the oActions.py extension
 
         # run
         observerSwarm.run()

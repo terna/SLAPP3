@@ -1,1 +1,2 @@
-modelStep ask_all clock modelStep ask_one clock modelStep ask_one clock
+modelStep display2D ask_all clock modelStep display2D ask_one clock
+modelStep display2D ask_one clock

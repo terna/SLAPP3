@@ -28,4 +28,11 @@ def do2b(address, cycle):
 
 
 def otherSubSteps(subStep, address):
-    return False
+    if subStep == "display2D":
+        print("display2D under development!!!")
+        return True
+
+    #elif ...
+
+    else:
+        return False

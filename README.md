@@ -5,7 +5,7 @@ SLAPP <img src="./-pictures/slapp-logo.png" height="90" />
 
 Swarm-Like Agent Protocol in Python (3)
 
-Here you have SLAPP **3.1.0 build 20190204**, running in Python 3 (in the [SLAPP repository](http://terna.to.it/slapp_dep/) you have related material and very old versions; the 2.0.x versions are still related to Python 2).
+Here you have SLAPP **3.1.0 build 20190206**, running in Python 3 (in the [SLAPP repository](http://terna.to.it/slapp_dep/) you have related material and very old versions; the 2.0.x versions are still related to Python 2).
 
 We have here also a [**Reference Handbook**](SLAPP_Reference_Handbook.pdf) (it is still a draft and has to be improved).
 

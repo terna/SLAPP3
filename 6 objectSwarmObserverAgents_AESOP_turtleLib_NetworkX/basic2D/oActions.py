@@ -30,6 +30,7 @@ def do2b(address, cycle):
 def otherSubSteps(subStep, address):
     if subStep == "display2D":
         print("display2D under development!!!")
+        print("Time = ",common.cycle)
         for i in range(len(address.modelSwarm.agentList)):
             print("agent",address.modelSwarm.agentList[i].number)
         return True

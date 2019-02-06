@@ -1,5 +1,6 @@
 from Tools import *
 from Agent import *
+from display2D import *
 
 
 def do1b(address):
@@ -29,10 +30,8 @@ def do2b(address, cycle):
 
 def otherSubSteps(subStep, address):
     if subStep == "display2D":
-        print("display2D under development!!!")
-        print("Time = ",common.cycle)
-        for i in range(len(address.modelSwarm.agentList)):
-            print("agent",address.modelSwarm.agentList[i].number)
+        print("display2D under development!!!","Time = ",common.cycle)
+        display2D(address.modelSwarm.agentList, common.cycle)
         return True
 
     #elif ...

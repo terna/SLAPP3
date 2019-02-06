@@ -14,12 +14,12 @@ def display2D(agentList, cycle):
         IPy=checkRunningInIPython()
         # Create a named display, if in iPython
         if IPy: myDisplay = display(None, display_id=True)
-        
+
         #for i in range(len(agentList)):
         #    print("agent",agentList[i].number)
 
         # prepare graphic space
-        fig, ax = plt.subplots(figsize=(10, 10))
-        ax.set_xlim(0, 1)
-        ax.set_ylim(0, 1)
+        fig, ax = plt.subplots(figsize=(7,7))
+        ax.set_xlim(agentList[0].lX, agentList[0].rX)
+        ax.set_ylim(agentList[0].bY, agentList[0].tY)
         if IPy: dots = ax.plot([],[],'ro')

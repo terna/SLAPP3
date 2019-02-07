@@ -70,6 +70,10 @@ class Agent(SuperAgent):
         print(self.agType, "agent # ", self.number, " is at X = ",
               self.xPos, " Y = ", self.yPos)
 
+    def reportPos(self, **d):
+        return (self.xPos, self.yPos)
+
+
     # adding a task (from v. 1.35 of SLAPP)
     # common is derived importing Tools
     def addTask(self):

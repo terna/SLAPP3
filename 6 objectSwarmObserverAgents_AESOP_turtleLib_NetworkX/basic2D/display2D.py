@@ -10,6 +10,7 @@ def checkRunningInIPython():
 
 
 def display2D(agentList, cycle):
+    global IPy, ax, dots, fig, myDisplay
     if cycle==1:
         IPy=checkRunningInIPython()
         # Create a named display, if in iPython
@@ -20,6 +21,39 @@ def display2D(agentList, cycle):
 
         # prepare graphic space
         fig, ax = plt.subplots(figsize=(7,7))
+        # asking the dimension of the world to one of the agents (the 0 one)
         ax.set_xlim(agentList[0].lX, agentList[0].rX)
         ax.set_ylim(agentList[0].bY, agentList[0].tY)
-        if IPy: dots = ax.plot([],[],'ro')
+        if IPy: dots, = ax.plot([],[],'ro')
+
+    if not IPy:
+        plt.gca().cla()
+        # asking the dimension of the world to one of the agents (the 0 one)
+        ax.set_xlim(agentList[0].lX, agentList[0].rX)
+        ax.set_ylim(agentList[0].bY, agentList[0].tY)
+
+    # update data
+    xList=[]
+    yList=[]
+
+    for i in range(len(agentList)):
+        x,y=agentList[i].reportPos()
+        xList.append(x)
+        yList.append(y)
+
+    if IPy:
+        dots.set_data(xList, yList)
+    else:
+        ax.plot(xList,yList,'ro')
+
+    # display
+    if cycle==1: ax.set_title(str(cycle)+" initial frame")
+    #TMP if cycle>1 and cycle<nCycles: ax.set_title(str(cycle))
+    if cycle>1: ax.set_title(str(cycle))
+    #TMP if cycle==nCycles: ax.set_title(str(cycle)+" final frame")
+
+    if IPy: myDisplay.update(fig)
+    else: fig.canvas.draw()
+
+    plt.pause(1.0)
+    print("end cycle",cycle,"of the animation")

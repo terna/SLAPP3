@@ -9,7 +9,7 @@ def checkRunningInIPython():
         return False
 
 
-def display2D(agentList, cycle):
+def display2D(agentList, cycle, nCycles):
     global IPy, ax, dots, fig, myDisplay
     if cycle==1:
         IPy=checkRunningInIPython()
@@ -48,9 +48,8 @@ def display2D(agentList, cycle):
 
     # display
     if cycle==1: ax.set_title(str(cycle)+" initial frame")
-    #TMP if cycle>1 and cycle<nCycles: ax.set_title(str(cycle))
-    if cycle>1: ax.set_title(str(cycle))
-    #TMP if cycle==nCycles: ax.set_title(str(cycle)+" final frame")
+    if cycle>1 and cycle<nCycles: ax.set_title(str(cycle))
+    if cycle==nCycles: ax.set_title(str(cycle)+" final frame")
 
     if IPy: myDisplay.update(fig)
     else: fig.canvas.draw()

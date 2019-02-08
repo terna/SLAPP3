@@ -9,7 +9,7 @@ def checkRunningInIPython():
         return False
 
 
-def display2D(agentList, cycle, nCycles):
+def display2D(agentList, cycle, nCycles, sleep):
     global IPy, ax, dots, fig, myDisplay
     if cycle==1:
         IPy=checkRunningInIPython()
@@ -54,5 +54,5 @@ def display2D(agentList, cycle, nCycles):
     if IPy: myDisplay.update(fig)
     else: fig.canvas.draw()
 
-    plt.pause(1.0)
+    plt.pause(sleep+0.001) # if sleep is 0, it locks the figure
     print("end cycle",cycle,"of the animation")

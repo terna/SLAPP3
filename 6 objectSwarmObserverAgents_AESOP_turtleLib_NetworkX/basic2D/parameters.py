@@ -28,3 +28,5 @@ def loadParameters(self):
     print("Y size of the world? ", self.worldYSize)
 
     self.nCycles = eval(input("How many cycles? (0 = exit) "))
+
+    common.sleep = eval(input("Display time per frame (in sec.s, e.g., 0.10) "))

@@ -354,8 +354,8 @@ in SLAPP3 a 0 probability of the execution of a method is now working
 
 improved the report of method probabilities starting the execution
 
-(2018 02 04)
+(2018 02 09)
 
 3.1.0
 
-new versions of the 'basic' to introduce 2D and 3D visualization
+new versions of the 'basic' project to introduce 2D and 3D visualization

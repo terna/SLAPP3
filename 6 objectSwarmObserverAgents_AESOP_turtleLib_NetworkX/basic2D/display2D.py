@@ -10,7 +10,9 @@ def checkRunningInIPython():
 
 
 def display2D(agentList, cycle, nCycles, sleep):
-    global IPy, ax, dots, fig, myDisplay
+    global IPy, ax, dots, fig, myDisplay # to avoid missing assignment errors
+
+    # preparing the frame space
     if cycle==1:
         IPy=checkRunningInIPython()
         # Create a named display, if in iPython
@@ -32,7 +34,7 @@ def display2D(agentList, cycle, nCycles, sleep):
         ax.set_xlim(agentList[0].lX, agentList[0].rX)
         ax.set_ylim(agentList[0].bY, agentList[0].tY)
 
-    # update data
+    # update data from the agents' world
     xList=[]
     yList=[]
 

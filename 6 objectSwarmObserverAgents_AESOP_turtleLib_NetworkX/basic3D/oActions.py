@@ -31,8 +31,8 @@ def do2b(address, cycle):
 def otherSubSteps(subStep, address):
 
     # display2D to be adpated for different cases
-    if subStep == "display2D":
-        display2D(address.modelSwarm.agentList, common.cycle, address.nCycles,
+    if subStep == "display3D":
+        display3D(address.modelSwarm.agentList, common.cycle, address.nCycles,
                   common.sleep)
         return True
 

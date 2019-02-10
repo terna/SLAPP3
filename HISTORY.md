@@ -358,6 +358,12 @@ improved the report of method probabilities starting the execution
 
 3.1.0
 
-new versions of the 'basic' project to introduce 2D visualization
+new version of the 'basic' project to introduce 2D visualization
 
-improved contents in iRunShellOnline.ipynb file
+improved contents of iRunShellOnline.ipynb file
+
+(2018 02 10)
+
+3.1.1
+
+new version of the 'basic' project to introduce 3D visualization

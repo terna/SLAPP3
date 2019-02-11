@@ -29,7 +29,7 @@ def display3D(agentList, cycle, nCycles, sleep):
         ax.set_xlim(agentList[0].lX, agentList[0].rX)
         ax.set_ylim(agentList[0].bY, agentList[0].tY)
         ax.set_zlim(agentList[0].bZ, agentList[0].tZ)
-        if IPy: dots = ax.plot3D([],[],'ro')
+        if IPy: dots, = ax.plot3D([],[],'ro')
 
 
     if not IPy:
@@ -57,9 +57,14 @@ def display3D(agentList, cycle, nCycles, sleep):
         ax.plot3D(xList,yList,zList,'ro')
 
     # display
-    if cycle==1: ax.set_title(str(cycle)+" initial frame")
-    if cycle>1 and cycle<nCycles: ax.set_title(str(cycle))
-    if cycle==nCycles: ax.set_title(str(cycle)+" final frame")
+    if IPy:
+        if cycle==1: ax.set_title(str(cycle)+" initial frame",loc='left')
+        if cycle>1 and cycle<nCycles: ax.set_title(str(cycle),loc='left')
+        if cycle==nCycles: ax.set_title(str(cycle)+" final frame",loc='left')
+    else:
+        if cycle==1: ax.set_title(str(cycle)+" initial frame")
+        if cycle>1 and cycle<nCycles: ax.set_title(str(cycle))
+        if cycle==nCycles: ax.set_title(str(cycle)+" final frame")
 
     if IPy: myDisplay.update(fig)
     else: fig.canvas.draw()

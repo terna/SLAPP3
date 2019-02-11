@@ -61,6 +61,8 @@ class Agent(SuperAgent):
             self.xPos += dx
             dy = randomMove(self.jump)
             self.yPos += dy
+            dz = randomMove(self.jump)
+            self.zPos += dz
             #self.xPos = (self.xPos + self.worldXSize) % self.worldXSize
             #self.yPos = (self.yPos + self.worldYSize) % self.worldYSize
             if self.xPos < self.lX:
@@ -71,6 +73,10 @@ class Agent(SuperAgent):
                 self.yPos = self.bY
             if self.yPos > self.tY:
                 self.yPos = self.tY
+            if self.zPos < self.bZ:
+                self.zPos = self.bZ
+            if self.zPos > self.tZ:
+                self.zPos = self.tZ
 
     # report
     def reportPosition(self, **d):

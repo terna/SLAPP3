@@ -39,7 +39,7 @@ def display3D(agentList, cycle, nCycles, sleep):
     yList=[]
 
     for i in range(len(agentList)):
-        x,y=agentList[i].reportPos()
+        x,y,z=agentList[i].reportPos()
         xList.append(x)
         yList.append(y)
 

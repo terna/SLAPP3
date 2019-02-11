@@ -75,10 +75,10 @@ class Agent(SuperAgent):
     # report
     def reportPosition(self, **d):
         print(self.agType, "agent # ", self.number, " is at X = ",
-              self.xPos, " Y = ", self.yPos)
+              self.xPos, " Y = ", self.yPos, " Z = ", self.zPos)
 
     def reportPos(self, **d):
-        return (self.xPos, self.yPos)
+        return (self.xPos, self.yPos, self.zPos)
 
 
     # adding a task (from v. 1.35 of SLAPP)

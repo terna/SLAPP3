@@ -1,5 +1,5 @@
 # commonVar.py
 
-projectVersion = 1.3.1
+projectVersion = 1.4
 
 toBeExecuted = "print ('Goodbye')"  # added () in print BY HAND

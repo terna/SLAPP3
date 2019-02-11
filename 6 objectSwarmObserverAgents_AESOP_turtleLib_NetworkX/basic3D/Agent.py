@@ -25,8 +25,9 @@ class Agent(SuperAgent):
         # the agent
         self.xPos = xPos
         self.yPos = yPos
+        self.zPos = zPos
         print("agent", self.agType, "#", self.number,
-              "has been created at", self.xPos, ",", self.yPos)
+              "has been created at", self.xPos, ",", self.yPos, ",", self.zPos)
 
     # ",**d" in the parameter lists of the methods is a place holder
     # in case we use, calling the method, a dictionary as last par

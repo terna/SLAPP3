@@ -1,6 +1,6 @@
 # commonVar.py
 
-projectVersion = 1.2
+projectVersion = 1.2.1
 
 # added () in print BY HAND
 toBeExecuted = "print ('Goodbye from the debug world.')"

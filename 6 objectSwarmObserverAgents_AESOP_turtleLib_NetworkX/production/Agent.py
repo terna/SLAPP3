@@ -7,8 +7,11 @@ import commonVar as common
 
 class Agent(SuperAgent):
     def __init__(self, number, myWorldState,
-                 xPos=0, yPos=0, lX=-20, rX=19, bY=-20, tY=19, agType="",
+                 xPos=0, yPos=0, lX=0, rX=0, bY=0, tY=0, agType="",
                  sector=0):
+                 # 0 definitions to be replaced (useful only if the
+                 # dimensions are omitted and we do not use space)
+
 
         # the environment
 

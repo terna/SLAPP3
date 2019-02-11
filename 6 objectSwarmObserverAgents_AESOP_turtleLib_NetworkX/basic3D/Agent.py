@@ -5,7 +5,11 @@ from agTools import *
 
 class Agent(SuperAgent):
     def __init__(self, number, myWorldState,
-                 xPos, yPos, lX=-20, rX=19, bY=-20, tY=19, agType=""):
+                 xPos, yPos, zPos, lX=0, rX=0, bY=0, tY=0, bZ=0, tZ=0,
+                 agType=""):
+                 # 0 definitions to be replaced (useful only if the
+                 # dimensions are omitted and we do not use space)
+
         # the environment
         self.agOperatingSets = []
         self.number = number
@@ -13,6 +17,8 @@ class Agent(SuperAgent):
         self.rX = rX
         self.bY = bY
         self.tY = tY
+        self.bZ = bZ
+        self.tZ = tZ
         if myWorldState != 0:
             self.myWorldState = myWorldState
         self.agType = agType

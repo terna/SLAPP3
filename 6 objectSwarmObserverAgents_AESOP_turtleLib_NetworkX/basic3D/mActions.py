@@ -33,7 +33,11 @@ def do1(address):
 
 def createTheAgent(self, line, num, agType):
     # explictly pass self, here we use a function
+    # added z axis for position in 3D
 
+    # third axis dimension copied form y dimension
+    bottomZ=self.bottomY
+    topZ=self.topY
     if len(line.split()) == 1:  # weak control, can be improved
         anAgent = Agent(
             num,
@@ -44,10 +48,15 @@ def createTheAgent(self, line, num, agType):
             random.randint(
                 self.bottomY,
                 self.topY),
+            random.randint(
+                bottomZ,
+                topZ),
             self.leftX,
             self.rightX,
             self.bottomY,
             self.topY,
+            bottomZ,
+            topZ,
             agType=agType)
         self.agentList.append(anAgent)
 

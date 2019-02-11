@@ -124,10 +124,15 @@ class ModelSwarm:
             self.worldState = 0
 
         # this block is not always useful, but if not necessary does not hurt
-        self.leftX = int(-self.worldXSize / 2)
-        self.rightX = int(self.worldXSize - 1 - self.worldXSize / 2)
-        self.bottomY = int(-self.worldYSize / 2)
-        self.topY = int(self.worldYSize - 1 - self.worldYSize / 2)
+        # rows commented and new rows added with v. 3.1.1
+        #self.leftX = int(-self.worldXSize / 2)
+        self.leftX = -self.worldXSize / 2
+        #self.rightX = int(self.worldXSize - 1 - self.worldXSize / 2)
+        self.rightX = self.worldXSize / 2
+        #self.bottomY = int(-self.worldYSize / 2)
+        self.bottomY = -self.worldYSize / 2
+        #self.topY = int(self.worldYSize - 1 - self.worldYSize / 2)
+        self.topY = self.worldYSize / 2
 
         # internal agents (bland ones)
         # the specialized creation function, related to the project,

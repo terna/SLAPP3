@@ -362,8 +362,18 @@ new version of the 'basic' project to introduce 2D visualization
 
 improved contents of iRunShellOnline.ipynb file
 
-(2018 02 10)
+(2018 02 11)
 
 3.1.1
+
+fixed a misleading calculation about the default space limits in
+$$slapp$$/ModelSwarm.py: we are not reasoning here by patches such as in NetLogo,
+but in a continuous space; we maintain the previous definition as a commented
+rows
+
+consistently, we have corrected the __init__ function in Agent.py of basic,
+basic2D, basic3D, basic2classes (also in otherAgent.py), basicSpecialAction,
+debug, and production, to eliminate numerical specific values, leaving 0 values
+as unused default initializations
 
 new version of the 'basic' project to introduce 3D visualization

@@ -29,7 +29,7 @@ def display3D(agentList, cycle, nCycles, sleep):
         ax.set_xlim(agentList[0].lX, agentList[0].rX)
         ax.set_ylim(agentList[0].bY, agentList[0].tY)
         ax.set_zlim(agentList[0].bZ, agentList[0].tZ)
-        if IPy: dots, = ax.plot3D([],[],'ro')
+        if IPy: dots = ax.plot3D([],[],'ro')
 
 
     if not IPy:
@@ -51,8 +51,9 @@ def display3D(agentList, cycle, nCycles, sleep):
         zList.append(z)
 
     if IPy:
-        dots.set_data(xList, yList)
-        dots.set_3d_properties(zList)
+        dots[0].set_data(xList, yList)
+        dots[0].set_3d_properties(zList)
+        # dots[1]  etc. for a second series
     else:
         ax.plot3D(xList,yList,zList,'ro')
 

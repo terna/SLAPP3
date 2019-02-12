@@ -26,7 +26,7 @@ def display2D(agentList, cycle, nCycles, sleep):
         # asking the dimension of the world to one of the agents (the 0 one)
         ax.set_xlim(agentList[0].lX, agentList[0].rX)
         ax.set_ylim(agentList[0].bY, agentList[0].tY)
-        if IPy: dots, = ax.plot([],[],'ro')
+        if IPy: dots = ax.plot([],[],'ro')
 
     if not IPy:
         plt.gca().cla()
@@ -44,7 +44,8 @@ def display2D(agentList, cycle, nCycles, sleep):
         yList.append(y)
 
     if IPy:
-        dots.set_data(xList, yList)
+        dots[0].set_data(xList, yList)
+        # dots[1] etc. for a second series
     else:
         ax.plot(xList,yList,'ro')
 

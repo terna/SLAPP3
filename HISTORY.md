@@ -362,7 +362,7 @@ new version of the 'basic' project to introduce 2D visualization
 
 improved contents of iRunShellOnline.ipynb file
 
-(2018 02 11)
+(2018 02 12)
 
 3.1.1
 

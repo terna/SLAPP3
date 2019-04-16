@@ -23,9 +23,16 @@ def do1(address):
 def createTheAgent(self, line, num, agType):
     # explicitly pass self, here we use a function
 
-    # check for a least an agent with numner==1
+    # check for at least one agent with number==1
     if num == 1:
         common.agent1existing = True
+
+        #create file for first hayekian step output
+        import csv
+        common.csvf=open(common.pro + "/" +\
+           "firstStepOutputInHayekianMarket.csv", "w")
+        common.wr=csv.writer(common.csvf)
+        common.closed=False
 
     # workers
     if agType == "workers":

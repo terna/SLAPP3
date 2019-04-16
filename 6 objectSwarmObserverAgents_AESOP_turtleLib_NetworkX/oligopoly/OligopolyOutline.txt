@@ -1,0 +1,6 @@
+The file OligopolyOutline.tif is the basic one, to be used via SketchBook app.
+
+It contains layers, absolutely necessary to make correction.
+
+From SketchBook (or via a transformation) we generate also OligopolyOutline.png,
+that can be employed in MarkDown and in LaTeX.

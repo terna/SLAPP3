@@ -1,0 +1,6 @@
+*.pyc
+workers.txt
+schedule.txt
+*.csv
+!labelsPositions.csv
+.ipynb_checkpoints/*

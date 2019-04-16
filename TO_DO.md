@@ -3,6 +3,6 @@
 
 *  avoid the need of *penPosition.py* when not used by a project  
 
-*  in the handbook, clarify the usefulness or not in having polymorphic agents
+*  in the handbook, clarify the usefulness of polymorphic agents
 
-*  improve the handbook (missing parts) 
+*  improve the handbook (missing parts)

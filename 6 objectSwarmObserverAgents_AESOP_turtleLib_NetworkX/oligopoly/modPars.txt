@@ -1,0 +1,3 @@
+consumptionRandomComponentSD		0
+randomComponentOfPlannedProduction	0
+maxDemandRelativeRandomShock		0

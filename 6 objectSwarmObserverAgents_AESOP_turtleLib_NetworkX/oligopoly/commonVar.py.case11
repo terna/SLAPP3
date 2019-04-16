@@ -200,7 +200,7 @@ nodeNumbersInGraph = False
 # within oActions.py)
 toBeExecuted = "saveData()"
 
-# specialAction in observerActions.txt is evauluated to "makeSpecialAction"
+# specialAction in observerActions.txt is evaluated to "makeSpecialAction"
 # defined in oActions.py
 specialAction = "makeSpecialAction()"
 # with

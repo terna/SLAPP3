@@ -45,16 +45,6 @@ def createGraph():
     common.g_labels = {}
     common.g_edge_labels = {}  # copy the address of the labels of the edges
 
-    # setting Figure 1 (the switch of the control between Figure 1 and Figure 2
-    # is managed in oActions.py
-
-    if not common.IPython or common.graphicStatus == "PythonViaTerminal":
-        # the or is about ipython running in a terminal
-        plt.figure(1)
-        mngr1 = plt.get_current_fig_manager()  # NB, after figure()
-        mngr1.window.wm_geometry("+650+0")
-        mngr1.set_window_title("Links Entrepreneurs - Workers")
-
 
 # searching tools
 
@@ -95,8 +85,8 @@ def createEdge(a, b):
 
 
 # using networkX and matplotlib case
-def closeNetworkXdisplay():
-    plt.close()
+#def closeNetworkXdisplay():
+#    plt.close()
 
 
 def openClearNetworkXdisplay():
@@ -106,6 +96,10 @@ def openClearNetworkXdisplay():
 
 
 def clearNetworkXdisplay():
+    try:
+        common.fNet
+        plt.set_current_figure(common.fNet)
+    except: pass
     plt.clf()
 
 
@@ -158,7 +152,12 @@ def drawGraph():
     # https://networkx.github.io/documentation/latest/reference/
     # generated/networkx.drawing.nx_pylab.draw_networkx.html
     # nx.draw_networkx(agentGraph,    font_size=10,node_size=500, \
-    clearNetworkXdisplay()
+    #clearNetworkXdisplay()
+    try:
+        common.fNet
+        plt.set_current_figure(common.fNet)
+    except: pass
+
     pruneEdges()
     # nx.draw_networkx(common.g,pos,font_size=10,node_size=common.nsize, \
     #     node_color=colors.values(), \

@@ -6,6 +6,7 @@ import graphicDisplayGlobalVarAndFunctions as gvf
 import commonVar as common
 import pandas as pd
 import parameters as par
+import numpy as np
 
 # to eliminate an annoying warning at time 1 in time series plot
 import warnings
@@ -13,6 +14,16 @@ warnings.filterwarnings("ignore", module="matplotlib")
 
 
 def do1b(address):
+
+    if common.cycle == 1:
+            # setting Figure for the net
+            if not common.IPython or common.graphicStatus == "PythonViaTerminal":
+                # the or is about ipython running in a terminal
+                f=gvf.plt.figure()
+                mngr1 = gvf.plt.get_current_fig_manager()  # NB, after figure()
+                mngr1.window.wm_geometry("+650+0")
+                mngr1.set_window_title("Links Entrepreneurs - Workers")
+                common.fNet = f
 
     # having the map of the agent
     agL = []
@@ -131,6 +142,9 @@ def collectTimeSeries(aL, t):
                 'totalProfit',
                 'totalProduction',
                 'plannedProduction',
+                'consumptionQ',
+                #'hPriceSd',
+                'hPSd',
                 'price',
                 'wage'])
         print("\nCreation of fhe time series dataframe\n")
@@ -141,16 +155,32 @@ def collectTimeSeries(aL, t):
         if not ag.employed:
             unemployed += 1
 
+    # hiding unexisting mean or sd of prices, in the pre-hayekian period
+    # or in the hayekian one if data are too few
+    # -100 is used in checkHayekianPrices function of WorldState.py
+    if common.price == -100: common.price=np.nan
+    hPSd_=common.hPSd
+    if common.hPSd==-100: hPSd_=np.nan
+
+    # hiding unexisting measure of consumtion in quantity in the pre-hayekian
+    # phase
+    if common.totalConsumptionInQuantityInA_TimeStep==0:
+        common.totalConsumptionInQuantityInA_TimeStep=np.nan
+
     ts_df2 = pd.DataFrame([[unemployed,
                             common.totalProfit,
                             common.totalProductionInA_TimeStep,
                             common.totalPlannedProduction,
+                            common.totalConsumptionInQuantityInA_TimeStep,
+                            hPSd_,
                             common.price,
                             common.wage]],
                           columns=['unemployed',
                                    'totalProfit',
                                    'totalProduction',
                                    'plannedProduction',
+                                   'consumptionQ',
+                                   'hPSd',
                                    'price',
                                    'wage'])
     # print ts_df2
@@ -174,27 +204,25 @@ def visualizePlot():
     if common.cycle == 1 and \
        (not common.IPython or common.graphicStatus == "PythonViaTerminal"):
         # the or is about ipython running in a terminal
-        gvf.plt.figure(2)
+        f= gvf.plt.figure()
         mngr2 = gvf.plt.get_current_fig_manager()
         mngr2.window.wm_geometry("+0+0")
         mngr2.set_window_title("Time series")
-
         params = {'legend.fontsize': 10}
         gvf.plt.rcParams.update(params)
+        common.axPlot = f.gca()
+        gvf.plt.ion()
 
     if not common.IPython or common.graphicStatus == "PythonViaTerminal":
         # the or is about ipython running in a terminal
-        gvf.plt.ion()
-        f2 = gvf.plt.figure(2)
-        gvf.plt.clf()
-        myax = f2.gca()
-        # myax.set_autoscale_on(True)
+        common.axPlot.cla()
 
         ts_dfOut = common.ts_df
         # set index to start from 1
         ts_dfOut.index += 1
         myPlot = ts_dfOut.plot(
             secondary_y=[
+                #'hPriceSd',
                 'price',
                 'wage'],
             marker="*",
@@ -203,14 +231,17 @@ def visualizePlot():
                 "LawnGreen",
                 "Blue",
                 "Violet",
+                "lightblue",
+                "Pink",
                 "Gray",
                 "Brown"],
-            ax=myax)
+            ax=common.axPlot)
         myPlot.set_ylabel(
-            'unemployed, totalProfit, totalProduction, plannedProduction')
+'unemployed, totalProfit, totalProduction, plannedProduction, consumptionQ, hPSd')
         myPlot.right_ax.set_ylabel('price, wage')
         myPlot.legend(loc='upper left')
         myPlot.axes.right_ax.legend(loc='lower right')
+        gvf.plt.pause(0.01)
 
     if common.IPython and not common.graphicStatus == "PythonViaTerminal":
         # the and not is about ipython running in a terminal
@@ -224,6 +255,7 @@ def visualizePlot():
         ts_dfOut.index += 1
         myPlot = ts_dfOut.plot(
             secondary_y=[
+                #'hPriceSd',
                 'price',
                 'wage'],
             marker="*",
@@ -232,18 +264,20 @@ def visualizePlot():
                 "LawnGreen",
                 "Blue",
                 "Violet",
+                "lightblue",
+                "Pink",
                 "Gray",
                 "Brown"],
             ax=myax)
         myPlot.set_ylabel(
-            'unemployed, totalProfit, totalProduction, plannedProduction')
+'unemployed, totalProfit, totalProduction, plannedProduction, consumptionQ, hPSd')
         myPlot.right_ax.set_ylabel('price, wage')
         myPlot.legend(loc='upper left')
         myPlot.axes.right_ax.legend(loc='lower right')
 
-    if not common.IPython or common.graphicStatus == "PythonViaTerminal":
+    #if not common.IPython or common.graphicStatus == "PythonViaTerminal":
         # the or is about ipython running in a terminal
-        gvf.plt.figure(1)
+        #gvf.plt.figure(1)
         # gvf.plt.show()
         # gvf.plt.pause(0.01) #to display the sequence
 
@@ -252,12 +286,14 @@ def visualizePlot():
         gvf.plt.show()
 
 
-# saving time series via toBeExecuted in commonVar.py
-def saveTimeSeries():
+# saving time data via toBeExecuted in commonVar.py
+def saveData():
 
     # using methodProbs which is a distionary generated by SLAPP
-    par.dataFrameAppend("from schedule.xls: work trouble probability",
-                        common.methodProbs["workTroubles"])
+    par.dataFrameAppend("notExisting",\
+                        "from schedule.xls: work trouble probability",
+                        common.methodProbs['workTroubles'])
+
 
     tt = time.strftime("%Y%m%d_%H-%M-%S")
 
@@ -276,4 +312,116 @@ def saveTimeSeries():
     common.str_df.to_csv(csvfile, index_label=False, index=False)
     csvfile.close()
 
-    print("Three files with date and hour", tt, "written in oligopoly folder.")
+    fileName = tt + "_firms.csv"
+    csvfile = open(common.pro + "/" + fileName, "w")
+    common.firm_df.to_csv(csvfile, index_label=False, index=False)
+    csvfile.close()
+
+    # the common.modPars_df can be missing
+    try:
+        common.modPars_df
+        fileName = tt + "_modPars.csv"
+        csvfile = open(common.pro + "/" + fileName, "w")
+        common.modPars_df.to_csv(csvfile, index_label=False, index=False)
+        print("Five files with date and hour", tt, "written in oligopoly folder.")
+
+    except BaseException:
+        print("Four files with date and hour", tt, "written in oligopoly folder.")
+
+
+
+# special action code, to be activated if the time
+# (cycle) is equal to ...
+#
+def makeSpecialAction():
+
+    if common.cycle == 1:
+
+        files=os.listdir(common.pro)
+
+        if "modPars.txt" in files:
+            common.file_modPars=True
+            print("The special action has to be activated at cycle ... ")
+            common.activationCycle = int(input("-1 if never "))
+
+        else:
+            print("\nWarning: no file 'modPars.txt', the specialAction "+\
+                  "item has no effect.\n\n")
+
+
+
+    if common.file_modPars and common.cycle == common.activationCycle:
+        print("\n***Special action at time =", common.cycle)
+        print("***Modification of the following parameters\n")
+
+        common.nameValues={}
+        fIn=open(common.pro+"/modPars.txt","r")
+
+        for line in fIn:
+              line=line.replace('\t',' ')
+              lineS=line.split() #one or more spaces as a delimiter
+
+              n=lineS[0]
+
+              if n=="mySeed" or n=="projectVersion" or n=="build" \
+                     or n=="notExisting" or n=="nCycles":
+                  print("Impossible to modify the '"+n+"' parameter in this way.")
+                  print("Program exiting.")
+                  os.sys.exit(1)
+
+              try: v=int(lineS[1])
+              except:
+                   try: v=float(lineS[1])
+                   except: v=lineS[1]
+
+
+              if common.check(n)[0]:
+                print('existing parameter '+n+', former value',\
+                       common.check(n)[1], ' new value ', v,'\n')
+                collectModPars(n,common.check(n)[1],v)
+              else:
+                print('added parameter '+n+', value ', v,'\n')
+                collectModPars(n,np.NaN,v)
+
+              common.nameValues[n]=v
+
+        fIn.close()
+
+        common.setVar()
+
+
+# collect modified parameters
+def collectModPars(parName, previousValue, newValue):
+            # creating the dataframe
+            try:
+                common.modPars_df
+            except BaseException:
+                common.modPars_df = pd.DataFrame(columns=[\
+                                    "Parameter internal names",\
+                                    "Parameter definitions", \
+                                    "previousValue","newValue"])
+                print("Creation of the modified parameter database\n")
+                # print common.modPars_df
+
+                # recording the modification cycle
+
+                modPars_df2 = pd.DataFrame([\
+                            ["NaN","Modifications at time = "+str(common.activationCycle), \
+                             np.NaN, np.NaN]], columns=[\
+                                               "Parameter internal names",\
+                                               "Parameter definitions", \
+                                               "previousValue","newValue"])
+
+                common.modPars_df = common.modPars_df.append(modPars_df2, \
+                                              ignore_index=True)
+
+                # regular data recording
+            modPars_df2 = pd.DataFrame([[parName, common.parsDict[parName],
+                                         previousValue, newValue]],
+                                   columns=["Parameter internal names",\
+                                            "Parameter definitions", \
+                                            "previousValue","newValue"])
+
+            common.modPars_df = common.modPars_df.append(modPars_df2, \
+                                                     ignore_index=True)
+            #print (common.modPars_df)

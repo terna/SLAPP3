@@ -1,0 +1,90 @@
+position,name
+ 0,projectVersion
+ 0,build
+24,mySeed
+49,wage
+41,socialWelfareCompensation
+35,reUseUnspentConsumptionCapability
+21,laborProductivity
+36,rho
+01,a1
+05,b1
+02,a2
+06,b2
+03,a3
+07,b3
+10,consumptionRandomComponentSD
+47,thresholdToEntrepreneur
+25,newEntrantExtraCosts
+14,extraCostsDuration
+34,randomComponentOfPlannedProduction
+04,absoluteBarrierToBecomeEntrepreneur
+48,thresholdToWorker
+23,maxDemandRelativeRandomShock
+15,fullEmploymentThreshold
+51,wageStepInFullEmployment
+45,temporaryRelativeWageIncrementAsBarrier
+22,maxAcceptableOligopolistRelativeIncrement
+11,cumulativelyMeasuringNewEntrantNumber
+30,productionCorrectionPsi
+ 0,nan
+50,wageCutForWorkTroubles
+27,penaltyValue
+44,startHayekianMarket
+08,checkResConsUnsoldProd
+16,hParadigm
+13,entrepreneursMindIfPlannedProductionFalls
+46,thresholdToDecreaseThePriceIfTotalPlannedPFalls
+42,soldThreshold1
+43,soldThreshold2
+12,decreasingRateRange
+17,increasingRateRange
+19,initShock
+18,initShift
+39,runningShockB
+40,runningShockS
+37,runningShiftB
+38,runningShiftS
+20,jump
+28,pJump
+29,priceSwitchIfProfitFalls
+31,profitStrategyReverseAfterN
+33,quasiHchoice
+09,consumptionQuota
+32,Q
+26,nCycles
+52,notExisting
+00,project version
+00,build
+24,seed (1 gets it from the clock)
+49,wage base
+41,social welfare compensation
+21,labor productivity
+38,expected employment ratio at t=1
+01,consumption behavior: a1
+05,consumption behavior: b1
+02,consumption behavior: a2
+06,consumption behavior: b2
+03,consumption behavior: a3
+07,consumption behavior: b3
+10,consumption random component (SD)
+47,relative threshold to become an entrepreneur
+25,new entrant extra costs
+14,duration (# of cycles) of the extra costs
+00,min random rel. component of planned production
+34,max random rel. component of planned production
+04,max new entrant number in a time step
+48,relative threshold from entrepreneur to unempl.
+00,min of uniform demand relative random shock
+23,max of uniform demand relative random shock
+15,full employment threshold
+51,wage step up in full employment
+45,wage relative increment as an entry barrier
+22,trigger level (relative increment of olig. firms)
+00,min lost production due to work troubles
+30,max lost production due to work troubles
+00,"probability of work troubles, see below"
+50,cut also the wages
+27,price penalty for the firms if work troubles
+26,# of cycles
+52,from schedule.xls: work trouble probability

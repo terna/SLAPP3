@@ -377,3 +377,9 @@ debug, and production, to eliminate numerical specific values, leaving 0 values
 as unused default initializations
 
 new version of the 'basic' project to introduce 3D visualization
+
+(2019 04 16)
+
+3.2
+
+new oligopoly folder (version *6book*)

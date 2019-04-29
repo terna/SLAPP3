@@ -1,7 +1,7 @@
 xlrd
 matplotlib
-networkx==2.2
-pandas
+networkx
+pandas==0.23.1
 scipy
 statsmodels
 patsy

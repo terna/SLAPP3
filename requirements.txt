@@ -1,7 +1,8 @@
+numpy==1.15.0
 xlrd
 matplotlib
 networkx
-pandas==0.23.1
+pandas
 scipy
 statsmodels
 patsy

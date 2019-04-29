@@ -1,6 +1,6 @@
 xlrd
 matplotlib
-networkx==2.2
+networkx
 pandas
 scipy
 statsmodels

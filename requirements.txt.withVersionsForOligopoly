@@ -1,7 +1,0 @@
-xlrd
-matplotlib
-networkx==2.2
-pandas
-scipy
-statsmodels
-patsy

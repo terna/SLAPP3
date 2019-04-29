@@ -1,5 +1,5 @@
-numpy==1.15.0
 xlrd
+numpy
 matplotlib
 networkx
 pandas

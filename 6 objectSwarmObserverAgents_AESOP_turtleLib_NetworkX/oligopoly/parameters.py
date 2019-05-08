@@ -1,4 +1,5 @@
 # parameters.py
+import myGauss
 from Tools import *
 import commonVar as common
 
@@ -95,6 +96,8 @@ def loadParameters(self):
     else:
         random.seed(mySeed)
         npr.seed(mySeed)
+
+    common.mg=myGauss.myG()
 
     self.nAgents = 0
     print("No 'bland' agents")

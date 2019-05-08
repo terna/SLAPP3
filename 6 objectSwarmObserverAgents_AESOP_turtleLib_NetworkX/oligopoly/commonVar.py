@@ -1,11 +1,13 @@
 # commonVar.py
 import os
 
-projectVersion = "6"
+projectVersion = "6, book example 11"
 
-build = "20181116"
+build = "20190507"
 
 debug = False
+
+example = "11"
 
 # function for the management of the paramenters
 def setVar():
@@ -200,7 +202,7 @@ nodeNumbersInGraph = False
 # within oActions.py)
 toBeExecuted = "saveData()"
 
-# specialAction in observerActions.txt is evauluated to "makeSpecialAction"
+# specialAction in observerActions.txt is evaluated to "makeSpecialAction"
 # defined in oActions.py
 specialAction = "makeSpecialAction()"
 # with

@@ -127,7 +127,6 @@ class Agent(SuperAgent):
         # -1 if previous action was an unsuccessful sell attempt
         self.statusS = 0
 
-
     # talk
     def talk(self):
         print(self.agType, self.number)
@@ -487,7 +486,7 @@ class Agent(SuperAgent):
                                       previuosPrice) \
                 / nEntrepreneurs
 
-            #self.plannedProduction += gauss(0,self.plannedProduction/10)
+            #self.plannedProduction += common.mg.myGauss(0,self.plannedProduction/10)
 
             shock = uniform(
                 -common.randomComponentOfPlannedProduction,
@@ -1010,7 +1009,7 @@ class Agent(SuperAgent):
         # print self.production/common.laborProductivity
         self.profit = (self.production / common.laborProductivity) * \
             (common.revenuesOfSalesForEachWorker -
-             common.wage) + gauss(0, 0.05)
+             common.wage) + common.mg.myGauss(0, 0.05)
 
         # calculateProfit
     def evaluateProfit(self):
@@ -1220,7 +1219,7 @@ class Agent(SuperAgent):
         if self.agType == "entrepreneurs":
             self.consumption = common.a1 + \
                 common.b1 * (self.profit + common.wage) + \
-                gauss(0, common.consumptionRandomComponentSD)
+                common.mg.myGauss(0, common.consumptionRandomComponentSD)
             if self.consumption < 0:
                 self.consumption = 0
             # profit, in V2, is at time -1 due to the sequence in schedule2.xls
@@ -1230,14 +1229,14 @@ class Agent(SuperAgent):
         if self.agType == "workers" and self.employed:
             self.consumption = common.a2 + \
                 common.b2 * common.wage + \
-                gauss(0, common.consumptionRandomComponentSD)
+                common.mg.myGauss(0, common.consumptionRandomComponentSD)
 
         #case (3)
         # Y3=socialWelfareCompensation
         if self.agType == "workers" and not self.employed:
             self.consumption = common.a3 + \
                 common.b3 * common.socialWelfareCompensation + \
-                gauss(0, common.consumptionRandomComponentSD)
+                common.mg.myGauss(0, common.consumptionRandomComponentSD)
 
         # update totalPlannedConsumptionInValueInA_TimeStep
         common.totalPlannedConsumptionInValueInA_TimeStep += self.consumption
@@ -1252,7 +1251,7 @@ class Agent(SuperAgent):
         if self.agType == "entrepreneurs":
             self.consumption = common.a1 + \
                 common.b1 * (self.profit + common.wage) + \
-                gauss(0, common.consumptionRandomComponentSD)
+                common.mg.myGauss(0, common.consumptionRandomComponentSD)
             if self.consumption < 0:
                 self.consumption = 0
             # profit, in V2, is at time -1 due to the sequence in schedule2.xls
@@ -1267,19 +1266,19 @@ class Agent(SuperAgent):
             if common.wageCutForWorkTroubles:
                 self.consumption = common.a2 + \
                     common.b2 * common.wage * (1. - self.workTroubles) + \
-                    gauss(0, common.consumptionRandomComponentSD)
+                    common.mg.myGauss(0, common.consumptionRandomComponentSD)
                 # print "worker", self.number, "wage x",(1.-self.workTroubles)
             else:
                 self.consumption = common.a2 + \
                     common.b2 * common.wage + \
-                    gauss(0, common.consumptionRandomComponentSD)
+                    common.mg.myGauss(0, common.consumptionRandomComponentSD)
 
         #case (3)
         # Y3=socialWelfareCompensation
         if self.agType == "workers" and not self.employed:
             self.consumption = common.a3 + \
                 common.b3 * common.socialWelfareCompensation + \
-                gauss(0, common.consumptionRandomComponentSD)
+                common.mg.myGauss(0, common.consumptionRandomComponentSD)
 
         # update totalPlannedConsumptionInValueInA_TimeStep
         common.totalPlannedConsumptionInValueInA_TimeStep += self.consumption
@@ -1289,6 +1288,7 @@ class Agent(SuperAgent):
 
     # consumptions
     def planConsumptionInValueV6(self):
+
         self.consumption = 0
         #case (1)
         # Y1=profit(t-1)+wage NB no negative consumption if profit(t-1) < 0
@@ -1296,7 +1296,7 @@ class Agent(SuperAgent):
         if self.agType == "entrepreneurs":
             self.consumption = common.a1 + \
                 common.b1 * (self.profit + common.wage) + \
-                gauss(0, common.consumptionRandomComponentSD)
+                common.mg.myGauss(0, common.consumptionRandomComponentSD)
             if self.consumption < 0:
                 self.consumption = 0
             # profit, in V2, is at time -1 due to the sequence in schedule2.xls
@@ -1311,19 +1311,19 @@ class Agent(SuperAgent):
             if common.wageCutForWorkTroubles:
                 self.consumption = common.a2 + \
                     common.b2 * common.wage * (1. - self.workTroubles) + \
-                    gauss(0, common.consumptionRandomComponentSD)
+                    common.mg.myGauss(0, common.consumptionRandomComponentSD)
                 # print "worker", self.number, "wage x",(1.-self.workTroubles)
             else:
                 self.consumption = common.a2 + \
                     common.b2 * common.wage + \
-                    gauss(0, common.consumptionRandomComponentSD)
+                    common.mg.myGauss(0, common.consumptionRandomComponentSD)
 
         #case (3)
         # Y3=socialWelfareCompensation
         if self.agType == "workers" and not self.employed:
             self.consumption = common.a3 + \
                 common.b3 * common.socialWelfareCompensation + \
-                gauss(0, common.consumptionRandomComponentSD)
+                common.mg.myGauss(0, common.consumptionRandomComponentSD)
 
         # reuse unspent consumption capability
         #if self.number==1:

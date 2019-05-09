@@ -59,7 +59,7 @@ class myG():
             pass
 
         if common.fgIn != None:
-            g=float(common.fgIn.read())
+            g=float(common.fgIn.readline())
             r.gauss(mu, sigma) # to generate two random numbers and maintain
                                # the orginal sequence
 

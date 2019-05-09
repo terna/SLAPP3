@@ -9,6 +9,8 @@ debug = False
 
 example = "11"
 
+fgIn=fgOu=None # used in myGauss.py
+
 # function for the management of the paramenters
 def setVar():
     #print(nameValues)

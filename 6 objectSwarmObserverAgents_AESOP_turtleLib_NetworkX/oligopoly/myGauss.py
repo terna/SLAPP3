@@ -1,6 +1,7 @@
 # https://github.com/python/cpython/blob/master/Lib/random.py
 import random as r
 import math
+import commonVar as common
 
 class myG():
     # When x and y are two variables from [0, 1), uniformly
@@ -21,7 +22,6 @@ class myG():
 
         self.TWOPI=2.0*math.pi
         self.gauss_next=None
-
 
     def myGauss0(self,mu, sigma):
 
@@ -47,5 +47,21 @@ class myG():
         return mu + z*sigma
 
     def myGauss(self,mu, sigma):
+        if common.fgIn == None and common.fgOu==None:
+          try:
+            common.example
+            if common.example == "11":
+                try:
+                    common.fgIn=open(common.project+"/exampleGauss/11.txt","r")
+                except:
+                    common.fgOu=open(common.project+"/exampleGauss/11.txt","w")
+          except:
+            pass
 
-        return r.gauss(mu, sigma)
+        if common.fgIn != None: g=foat(common.fgIn.read())
+
+        if common.fgOu != None:
+            g=r.gauss(mu, sigma)
+            print(g,file=common.fgOu)
+
+        return g

@@ -58,7 +58,10 @@ class myG():
           except:
             pass
 
-        if common.fgIn != None: g=foat(common.fgIn.read())
+        if common.fgIn != None:
+            g=foat(common.fgIn.read())
+            r.gauss(mu, sigma) # to generate two random numbers and maintain
+                               # the orginal sequence
 
         if common.fgOu != None:
             g=r.gauss(mu, sigma)

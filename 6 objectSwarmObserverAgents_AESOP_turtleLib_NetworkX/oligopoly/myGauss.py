@@ -62,9 +62,9 @@ class myG():
             g=float(common.fgIn.readline())
             r.gauss(mu, sigma) # void destination, call made to generate two
                                # random numbers. preserving the orginal sequence
+            return g
 
         if common.fgOu != None:
             g=r.gauss(mu, sigma)
             print(g,file=common.fgOu)
-
-        return g
+            return g

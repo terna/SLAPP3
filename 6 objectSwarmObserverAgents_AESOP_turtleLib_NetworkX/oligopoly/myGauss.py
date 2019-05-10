@@ -48,20 +48,20 @@ class myG():
 
     def myGauss(self,mu, sigma):
         if common.fgIn == None and common.fgOu==None:
-          try:
+          try: # old cases?
             common.example
             if common.example == "11":
                 try:
                     common.fgIn=open(common.project+"/exampleGauss/11.txt","r")
                 except:
                     common.fgOu=open(common.project+"/exampleGauss/11.txt","w")
-          except:
-            pass
+          except: # new case!!!
+            return self.myGauss0(mu, sigma)
 
         if common.fgIn != None:
             g=float(common.fgIn.readline())
-            r.gauss(mu, sigma) # to generate two random numbers and maintain
-                               # the orginal sequence
+            r.gauss(mu, sigma) # void destination, call made to generate two
+                               # random numbers. preserving the orginal sequence
 
         if common.fgOu != None:
             g=r.gauss(mu, sigma)

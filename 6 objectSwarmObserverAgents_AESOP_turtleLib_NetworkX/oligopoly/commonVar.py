@@ -1,13 +1,13 @@
 # commonVar.py
 import os
 
-projectVersion = "6, tanto pe' prova'"
+projectVersion = "6, book case 10"
 
 build = "20190510"
 
 debug = False
 
-#example = ""
+case = "12"
 
 fgIn=fgOu=None # used in myGauss.py
 
@@ -71,14 +71,14 @@ b2 = 0.65 #0.7 #0.65
 # Y2=wage
 
 #(3)
-socialWelfareCompensation = 0.7 #0.4 #0.7 #0.4 #0.7 # 0.6 #0.70 #0.60 #0.75 #0.70 #0.3
+socialWelfareCompensation = 0.4 #0.7 #0.4 #0.7 # 0.6 #0.70 #0.60 #0.75 #0.70 #0.3
 a3 = 0
 b3 = 1
 # Y3=socialWelfareCompensation
 
 # quota of the unspent consumption capability coming from the past to be
-# added to the cyrrent consumption plan [0, 1]
-reUseUnspentConsumptionCapability= 0.75 #0.5 #0.5 #0 #NBNBNB #0 #0.5 #1
+# added to the current consumption plan [0, 1]
+reUseUnspentConsumptionCapability= 1.0 #0.5 #0 #NBNBNB #0 #0.5 #1
 
 #wages and revenues
 wageBase = 1.
@@ -183,10 +183,10 @@ runningShiftB = 0.1 #0 #0.1
 runningShiftS = 0.1 #0 #0.1
 
 # a jump in prices made by the sellers
-jump= 0.05 #0.2 #0.10 #0. #0.20 #0.05 #0.02 #0.10 #0.20 #0.10 #0.05 #0.30 #0.20 #0.10
+jump= 0.2 #0.10 #0. #0.20 #0.05 #0.02 #0.10 #0.20 #0.10 #0.05 #0.30 #0.20 #0.10
 # pjump set to -1 avoids the calculation of the jump and the generation
 # of a random number
-pJump= 0.2 #0.1 #0.05 #-1 #0.20 #0.5 #0.10 # 0.05
+pJump= 0.1 #0.05 #-1 #0.20 #0.5 #0.10 # 0.05
 
 priceSwitchIfProfitFalls= "raise" #"lower" #"raise" #"lower" #"raise" #"lower"
 profitStrategyReverseAfterN=5 #  0 means: acting again always possible
@@ -196,7 +196,7 @@ profitStrategyReverseAfterN=5 #  0 means: acting again always possible
 # Choosing among different quasi hayekian strategies in modifying seller
 # price
 
-quasiHchoice= "profit" #"randomUp" #"unsold" #"randomUp" #"unsold" # three choices: unsold, randomUp, profit
+quasiHchoice= "randomUp" #"unsold" #"randomUp" #"unsold" # three choices: unsold, randomUp, profit
 
 nodeNumbersInGraph = False
 

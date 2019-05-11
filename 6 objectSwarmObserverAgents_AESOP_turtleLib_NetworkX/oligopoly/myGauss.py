@@ -1,4 +1,5 @@
 # https://github.com/python/cpython/blob/master/Lib/random.py
+import os
 import random as r
 import math
 import commonVar as common
@@ -22,6 +23,8 @@ class myG():
 
         self.TWOPI=2.0*math.pi
         self.gauss_next=None
+        self.caseList=["7","7b","8","8b","9","9b","10","11"]
+        self.error=False
 
     def myGauss0(self,mu, sigma):
 
@@ -48,14 +51,24 @@ class myG():
 
     def myGauss(self,mu, sigma):
         if common.fgIn == None and common.fgOu==None:
-          try: # old cases?
-            common.example
-            if common.example == "11":
+          try: # book ASHAM case?
+            common.case
+            if common.case in self.caseList:
                 try:
                     common.fgIn=open(common.project+"/exampleGauss/11.txt","r")
                 except:
                     common.fgOu=open(common.project+"/exampleGauss/11.txt","w")
-          except: # new case!!!
+            else:
+              print("We cannot use 'case' in commonVar.py with a content outside")
+              print("the list",self.caseList)
+              self.error=True
+              raise # raise error condition to jump to except, exit() here would
+                    # not work
+
+          except:
+            if self.error: os.sys.exit(1) # here via raise condition in error
+
+            # new case!!!
             return self.myGauss0(mu, sigma)
 
         if common.fgIn != None:

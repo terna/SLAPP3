@@ -1,16 +1,15 @@
 # commonVar.py
 import os
 
-projectVersion = "6, book case 10"
+projectVersion = "6, book case 9b"
 
 build = "20190511"
 
 debug = False
 
-case = "10"
+case = "9b"
 
 fgIn=fgOu=None # used in myGauss.py
-
 # function for the management of the paramenters
 def setVar():
     #print(nameValues)
@@ -78,7 +77,7 @@ b3 = 1
 
 # quota of the unspent consumption capability coming from the past to be
 # added to the current consumption plan [0, 1]
-reUseUnspentConsumptionCapability= 1.0 #0.5 #0 #NBNBNB #0 #0.5 #1
+reUseUnspentConsumptionCapability= 0.5 #0 #NBNBNB #0 #0.5 #1
 
 #wages and revenues
 wageBase = 1.
@@ -173,17 +172,17 @@ increasingRateRange=0.01
 # Range of the correction of agent starting prices (h. market)
 initShock = 0.10 #0.2 #0.1 #0.3
 # initial shift in individual starting prices (h. market)
-initShift = 1.8 #1.1 #-0.15  #1.1 #0.7 #-0.15 #-0.10 #0.5 #0.1
+initShift = 1.1 #-0.15  #1.1 #0.7 #-0.15 #-0.10 #0.5 #0.1
 
 # Range of the correction of agent current price (h. market), as buyer/seller
-runningShockB = 0.01 #0.0008 #0.2 #0.001 #0.005 #0.001 #0.0008 #0.0005 #0.0001 #0.30 #0.01 #0.05 #0.20 #0.10 #0.05
+runningShockB = 0.0008 #0.2 #0.001 #0.005 #0.001 #0.0008 #0.0005 #0.0001 #0.30 #0.01 #0.05 #0.20 #0.10 #0.05
 runningShockS = 0.05 #0.02 #0.20 #0.05 #0.10 #0.05
 # current shift in individual price correction (h. market)
 runningShiftB = 0.1 #0 #0.1
 runningShiftS = 0.1 #0 #0.1
 
 # a jump in prices made by the sellers
-jump= 0.2 #0.10 #0. #0.20 #0.05 #0.02 #0.10 #0.20 #0.10 #0.05 #0.30 #0.20 #0.10
+jump= 0.10 #0. #0.20 #0.05 #0.02 #0.10 #0.20 #0.10 #0.05 #0.30 #0.20 #0.10
 # pjump set to -1 avoids the calculation of the jump and the generation
 # of a random number
 pJump= 0.1 #0.05 #-1 #0.20 #0.5 #0.10 # 0.05
@@ -196,7 +195,7 @@ profitStrategyReverseAfterN=5 #  0 means: acting again always possible
 # Choosing among different quasi hayekian strategies in modifying seller
 # price
 
-quasiHchoice= "randomUp" #"unsold" #"randomUp" #"unsold" # three choices: unsold, randomUp, profit
+quasiHchoice= "unsold" #"randomUp" #"unsold" # three choices: unsold, randomUp, profit
 
 nodeNumbersInGraph = False
 

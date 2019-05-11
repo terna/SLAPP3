@@ -55,9 +55,11 @@ class myG():
             common.case
             if common.case in self.caseList:
                 try:
-                    common.fgIn=open(common.project+"/exampleGauss/11.txt","r")
+                    common.fgIn=open(common.project+\
+                        "/exampleGauss/"+common.case+".txt","r")
                 except:
-                    common.fgOu=open(common.project+"/exampleGauss/11.txt","w")
+                    common.fgOu=open(common.project+\
+                        "/exampleGauss/"+common.case+".txt","w")
             else:
               print("We cannot use 'case' in commonVar.py with a content outside")
               print("the list",self.caseList)

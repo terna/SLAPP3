@@ -3,11 +3,11 @@ import os
 
 projectVersion = "6, book case 10"
 
-build = "20190510"
+build = "20190511"
 
 debug = False
 
-case = "12"
+case = "10"
 
 fgIn=fgOu=None # used in myGauss.py
 

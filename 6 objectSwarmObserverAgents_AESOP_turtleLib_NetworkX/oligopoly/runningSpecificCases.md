@@ -6,7 +6,7 @@ NetworkX 2.2
 matplotlib 3.0.2
 pandas 0.23.1
 
-In case of Python errors, try to go back to these versions. E.g., using pip in the form
+In case of Python errors, try to go back to these versions, using pip in the form
 
 pip uninstall specificLib && pip install specificLib==versionNumber
 (or pip -> pip3)

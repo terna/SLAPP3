@@ -10,6 +10,7 @@ debug = False
 case = "9b"
 
 fgIn=fgOu=None # used in myGauss.py
+
 # function for the management of the paramenters
 def setVar():
     #print(nameValues)

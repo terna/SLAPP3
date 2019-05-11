@@ -1,13 +1,13 @@
 # commonVar.py
 import os
 
-projectVersion = "6, book case 9"
+projectVersion = "6, book case 8b"
 
 build = "20190511"
 
 debug = False
 
-case = "9"
+case = "8b"
 
 fgIn=fgOu=None # used in myGauss.py
 
@@ -71,7 +71,7 @@ b2 = 0.65 #0.7 #0.65
 # Y2=wage
 
 #(3)
-socialWelfareCompensation = 0.7 #0.7 #0.4 #0.7 # 0.6 #0.70 #0.60 #0.75 #0.70 #0.3
+socialWelfareCompensation = 0.4 #0.7 #0.4 #0.7 # 0.6 #0.70 #0.60 #0.75 #0.70 #0.3
 a3 = 0
 b3 = 1
 # Y3=socialWelfareCompensation
@@ -151,10 +151,10 @@ startHayekianMarket = 1 #3 #1 #6
 # for explanations see the document
 # "Oligopoly: the Making of the Simulation Model", section
 # "Version 6, the hayekian market"
-hParadigm= "quasi" #"full" #"noPriceMod" #"full" #"quasi"
+hParadigm= "full" #"noPriceMod" #"full" #"quasi"
 
 # checking falling plannedProduction
-entrepreneursMindIfPlannedProductionFalls=True #False #True
+entrepreneursMindIfPlannedProductionFalls=False #True
 thresholdToDecreaseThePriceIfTotalPlannedPFalls=0.05 # 0.10
 
 # thresholds to decide
@@ -165,18 +165,18 @@ soldThreshold2=0.99 #0.95
 
 
 # 'quasi' hParadigm, decreasingRateRange
-decreasingRateRange=-0.10
+decreasingRateRange=-0.20
 
 # 'quasi' hParadigm, increasingRateRange
-increasingRateRange=0.01
+increasingRateRange=0.02
 
 # Range of the correction of agent starting prices (h. market)
 initShock = 0.10 #0.2 #0.1 #0.3
 # initial shift in individual starting prices (h. market)
-initShift = 1.1 #-0.15  #1.1 #0.7 #-0.15 #-0.10 #0.5 #0.1
+initShift = -0.15  #1.1 #0.7 #-0.15 #-0.10 #0.5 #0.1
 
 # Range of the correction of agent current price (h. market), as buyer/seller
-runningShockB = 0.0008 #0.2 #0.001 #0.005 #0.001 #0.0008 #0.0005 #0.0001 #0.30 #0.01 #0.05 #0.20 #0.10 #0.05
+runningShockB = 0.2 #0.001 #0.005 #0.001 #0.0008 #0.0005 #0.0001 #0.30 #0.01 #0.05 #0.20 #0.10 #0.05
 runningShockS = 0.05 #0.02 #0.20 #0.05 #0.10 #0.05
 # current shift in individual price correction (h. market)
 runningShiftB = 0.1 #0 #0.1
@@ -186,7 +186,7 @@ runningShiftS = 0.1 #0 #0.1
 jump= 0.10 #0. #0.20 #0.05 #0.02 #0.10 #0.20 #0.10 #0.05 #0.30 #0.20 #0.10
 # pjump set to -1 avoids the calculation of the jump and the generation
 # of a random number
-pJump= 0.1 #0.05 #-1 #0.20 #0.5 #0.10 # 0.05
+pJump= 0.05 #-1 #0.20 #0.5 #0.10 # 0.05
 
 priceSwitchIfProfitFalls= "raise" #"lower" #"raise" #"lower" #"raise" #"lower"
 profitStrategyReverseAfterN=5 #  0 means: acting again always possible
@@ -204,7 +204,7 @@ nodeNumbersInGraph = False
 # within oActions.py)
 toBeExecuted = "saveData()"
 
-# specialAction in observerActions.txt is evauluated to "makeSpecialAction"
+# specialAction in observerActions.txt is evaluated to "makeSpecialAction"
 # defined in oActions.py
 specialAction = "makeSpecialAction()"
 # with

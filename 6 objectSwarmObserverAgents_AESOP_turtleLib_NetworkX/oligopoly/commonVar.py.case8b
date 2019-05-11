@@ -1,11 +1,15 @@
 # commonVar.py
 import os
 
-projectVersion = "6"
+projectVersion = "6, book case 8b"
 
-build = "20181116"
+build = "20190511"
 
 debug = False
+
+case = "8b"
+
+fgIn=fgOu=None # used in myGauss.py
 
 # function for the management of the paramenters
 def setVar():

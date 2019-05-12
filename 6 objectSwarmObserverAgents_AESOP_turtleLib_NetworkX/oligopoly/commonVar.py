@@ -1,13 +1,13 @@
 # commonVar.py
 import os
 
-projectVersion = "6, book case 8b"
+projectVersion = "6, book case 8"
 
 build = "20190511"
 
 debug = False
 
-case = "8b"
+case = "8"
 
 fgIn=fgOu=None # used in myGauss.py
 
@@ -71,7 +71,7 @@ b2 = 0.65 #0.7 #0.65
 # Y2=wage
 
 #(3)
-socialWelfareCompensation = 0.4 #0.7 #0.4 #0.7 # 0.6 #0.70 #0.60 #0.75 #0.70 #0.3
+socialWelfareCompensation = 0.7 #0.4 #0.7 # 0.6 #0.70 #0.60 #0.75 #0.70 #0.3
 a3 = 0
 b3 = 1
 # Y3=socialWelfareCompensation

@@ -153,11 +153,8 @@ def drawGraph():
     # generated/networkx.drawing.nx_pylab.draw_networkx.html
     # nx.draw_networkx(agentGraph,    font_size=10,node_size=500, \
     #clearNetworkXdisplay()
-    try:
-        common.fNet
-        plt.set_current_figure(common.fNet)
-    except: pass
 
+    plt.figure(2)
     pruneEdges()
     # nx.draw_networkx(common.g,pos,font_size=10,node_size=common.nsize, \
     #     node_color=colors.values(), \

@@ -19,11 +19,10 @@ def do1b(address):
             # setting Figure for the net
             if not common.IPython or common.graphicStatus == "PythonViaTerminal":
                 # the or is about ipython running in a terminal
-                f=gvf.plt.figure()
+                f=gvf.plt.figure(num=2)
                 mngr1 = gvf.plt.get_current_fig_manager()  # NB, after figure()
                 mngr1.window.wm_geometry("+650+0")
                 mngr1.set_window_title("Links Entrepreneurs - Workers")
-                common.fNet = f
 
     # having the map of the agent
     agL = []
@@ -201,8 +200,7 @@ def visualizePlot():
     # html colors
     # http://www.w3schools.com/html/html_colornames.asp
 
-    if common.cycle == 1 and \
-       (not common.IPython or common.graphicStatus == "PythonViaTerminal"):
+    if not common.IPython or common.graphicStatus == "PythonViaTerminal":
         # the or is about ipython running in a terminal
         f= gvf.plt.figure()
         mngr2 = gvf.plt.get_current_fig_manager()

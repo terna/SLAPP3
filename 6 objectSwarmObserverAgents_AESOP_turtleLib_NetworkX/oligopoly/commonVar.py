@@ -1,15 +1,17 @@
 # commonVar.py
 import os
 
-projectVersion = "6, book case 7b"
+projectVersion = "6, book case 7"
 
-build = "20190513"
+build = "20190514"
 
 debug = False
 
-case = "7b"
+case = "7"
 
 fgIn=fgOu=None # used in myGauss.py
+
+debug = False
 
 # function for the management of the paramenters
 def setVar():
@@ -71,7 +73,7 @@ b2 = 0.65 #0.7 #0.65
 # Y2=wage
 
 #(3)
-socialWelfareCompensation = 0.4 #0.5 # 0.6 #0.70 #0.60 #0.75 #0.70 #0.3
+socialWelfareCompensation = 0.70 #0.60 #0.75 #0.70 #0.3
 a3 = 0
 b3 = 1
 # Y3=socialWelfareCompensation
@@ -204,7 +206,7 @@ nodeNumbersInGraph = False
 # within oActions.py)
 toBeExecuted = "saveData()"
 
-# specialAction in observerActions.txt is evauluated to "makeSpecialAction"
+# specialAction in observerActions.txt is evaluated to "makeSpecialAction"
 # defined in oActions.py
 specialAction = "makeSpecialAction()"
 # with

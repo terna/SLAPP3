@@ -1,9 +1,15 @@
 # commonVar.py
 import os
 
-projectVersion = "6"
+projectVersion = "6, book case 7"
 
-build = "20181116"
+build = "20190514"
+
+debug = False
+
+case = "7"
+
+fgIn=fgOu=None # used in myGauss.py
 
 debug = False
 

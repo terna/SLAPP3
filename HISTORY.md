@@ -383,3 +383,9 @@ new version of the 'basic' project to introduce 3D visualization
 3.2
 
 new oligopoly folder (version *6book*)
+
+(2019 05 14)
+
+3.3
+
+improved oligopoly folder (version *6book*, with stable results in Mac and Linux) 

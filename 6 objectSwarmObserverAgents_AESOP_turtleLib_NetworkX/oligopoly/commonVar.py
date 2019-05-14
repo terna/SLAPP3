@@ -1,13 +1,13 @@
 # commonVar.py
 import os
 
-projectVersion = "6, book case 8"
+projectVersion = "6, book case 7b"
 
-build = "20190511"
+build = "20190513"
 
 debug = False
 
-case = "8"
+case = "7b"
 
 fgIn=fgOu=None # used in myGauss.py
 
@@ -71,14 +71,14 @@ b2 = 0.65 #0.7 #0.65
 # Y2=wage
 
 #(3)
-socialWelfareCompensation = 0.7 #0.4 #0.7 # 0.6 #0.70 #0.60 #0.75 #0.70 #0.3
+socialWelfareCompensation = 0.4 #0.5 # 0.6 #0.70 #0.60 #0.75 #0.70 #0.3
 a3 = 0
 b3 = 1
 # Y3=socialWelfareCompensation
 
 # quota of the unspent consumption capability coming from the past to be
 # added to the current consumption plan [0, 1]
-reUseUnspentConsumptionCapability= 0.5 #0 #NBNBNB #0 #0.5 #1
+reUseUnspentConsumptionCapability= 0 #NBNBNB #0 #0.5 #1
 
 #wages and revenues
 wageBase = 1.
@@ -126,14 +126,14 @@ nu = 5
 rho = 0.9
 
 # threshold toEntrepreneur
-thresholdToEntrepreneur = 0.10 #0.08 #0.085 #0.09 #0.10 #0.075 #0.05 #0.05 #0.15 #0.10 #0.075 #0.045 #0.075 # was 0.15 in the paper  # was 0.20 in the init. trials
+thresholdToEntrepreneur = 0.08 #0.08 #0.085 #0.09 #0.10 #0.075 #0.05 #0.05 #0.15 #0.10 #0.075 #0.045 #0.075 # was 0.15 in the paper  # was 0.20 in the init. trials
 extraCostsDuration = 5 #3
 newEntrantExtraCosts = 60  # was 100.0 # was 2.0
 
 randomComponentOfPlannedProduction = 0.10
 
 # max new entrant number in a time step
-absoluteBarrierToBecomeEntrepreneur = 10 #20
+absoluteBarrierToBecomeEntrepreneur = 20
 
 maxDemandRelativeRandomShock = 0.15  # was 0.10 #was 0.20
 
@@ -183,10 +183,10 @@ runningShiftB = 0.1 #0 #0.1
 runningShiftS = 0.1 #0 #0.1
 
 # a jump in prices made by the sellers
-jump= 0.10 #0. #0.20 #0.05 #0.02 #0.10 #0.20 #0.10 #0.05 #0.30 #0.20 #0.10
+jump= 0. #0.20 #0.05 #0.02 #0.10 #0.20 #0.10 #0.05 #0.30 #0.20 #0.10
 # pjump set to -1 avoids the calculation of the jump and the generation
 # of a random number
-pJump= 0.05 #-1 #0.20 #0.5 #0.10 # 0.05
+pJump= -1 #0.20 #0.5 #0.10 # 0.05
 
 priceSwitchIfProfitFalls= "raise" #"lower" #"raise" #"lower" #"raise" #"lower"
 profitStrategyReverseAfterN=5 #  0 means: acting again always possible
@@ -204,7 +204,7 @@ nodeNumbersInGraph = False
 # within oActions.py)
 toBeExecuted = "saveData()"
 
-# specialAction in observerActions.txt is evaluated to "makeSpecialAction"
+# specialAction in observerActions.txt is evauluated to "makeSpecialAction"
 # defined in oActions.py
 specialAction = "makeSpecialAction()"
 # with

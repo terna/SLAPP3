@@ -57,11 +57,9 @@ class myG():
                 try:
                     common.fgIn=open(common.project+\
                         "/exampleGauss/"+common.case+".txt","r")
-                    print("11111111111")
                 except:
                     common.fgOu=open(common.project+\
                         "/exampleGauss/"+common.case+".txt","w")
-                    print("22222222222")
             else:
               print("We cannot use 'case' in commonVar.py with a content outside")
               print("the list",self.caseList)

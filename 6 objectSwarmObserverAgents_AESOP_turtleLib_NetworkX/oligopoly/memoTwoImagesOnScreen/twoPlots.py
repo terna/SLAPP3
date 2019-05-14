@@ -16,14 +16,13 @@ ax2.plot(b)
 plt.show()
 plt.pause(0.1)
 
-a.append(10)
-b.append(-10)
-
 input("enter to continue")
 
 ax1.cla()
 ax2.cla()
 
+a.append(10)
+b.append(-10)
 
 ax1.plot(a)
 plt.show()
@@ -37,5 +36,3 @@ input("enter to finish")
 
 plt.close()
 plt.close()
-
-

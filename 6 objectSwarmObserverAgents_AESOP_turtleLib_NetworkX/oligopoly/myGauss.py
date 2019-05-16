@@ -3,6 +3,7 @@ import os
 import random as r
 import math
 import commonVar as common
+import urllib.request
 
 class myG():
     # When x and y are two variables from [0, 1), uniformly
@@ -25,6 +26,8 @@ class myG():
         self.gauss_next=None
         self.caseList=["7","7b","8","8b","9","9b","10","11"]
         self.error=False
+        self.link = \
+         "https://raw.githubusercontent.com/terna/oligopolyBookCasesGaussianValues/master/"
 
     def myGauss0(self,mu, sigma):
 
@@ -54,11 +57,18 @@ class myG():
           try: # book ASHAM case?
             common.case
             if common.case in self.caseList:
-                try:
+                try: #local file existing
                     common.fgIn=open(common.project+\
                         "/exampleGauss/"+common.case+".txt","r")
+                    print("\nReading gaussian random values locally.\n")
                 except:
-                    common.fgOu=open(common.project+\
+                    try: # online file
+                        common.fgIn=\
+                           urllib.request.urlopen(self.link+common.case+".txt")
+                        print(\
+                         "\nReading gaussian random values from:",self.link,"\n")
+                    except:
+                        common.fgOu=open(common.project+\
                         "/exampleGauss/"+common.case+".txt","w")
             else:
               print("We cannot use 'case' in commonVar.py with a content outside")

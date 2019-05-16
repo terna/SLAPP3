@@ -77,3 +77,12 @@ The parameters of the different cases, contained into the *commonVar.py.caseX* f
 The values to be introduced interactively for each case, if any, are reported in the table of the file *T3.pdf*.
 
 The files T1.pdf, T2.pdf, and T3.pdf are in this folder.
+
+==========
+
+We can also run the model online, via [https://mybinder.org](https://mybinder.org),
+accessing the file system at
+[https://mybinder.org/v2/gh/terna/SLAPP3/master](https://mybinder.org/v2/gh/terna/SLAPP3/master) to modify – if necessary – the content of the folder ***oligopoly*** contained into the
+folder ***6 objectSwarmObserverAgents_AESOP_turtleLib_NetworkX***.
+
+Then, from the main folder, we launch the *iRunShellOnline.ipynb* file, and finally we follow the instruction contained in it.

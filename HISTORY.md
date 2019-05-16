@@ -388,4 +388,12 @@ new oligopoly folder (version *6book*)
 
 3.3
 
-improved oligopoly folder (version *6book*, with stable results in Mac and Linux) 
+improved oligopoly folder (version *6book*, with stable results in Mac and Linux)
+
+(2019 05 16)
+
+3.3.1
+
+eliminating the heavy files from the folder exampleGauss in oligopoly folder
+(version *6book*, with stable results in Mac and Linux); they are now at
+https://github.com/terna/oligopolyBookCasesGaussianValues

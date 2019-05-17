@@ -85,4 +85,4 @@ accessing the file system at
 [https://mybinder.org/v2/gh/terna/SLAPP3/master](https://mybinder.org/v2/gh/terna/SLAPP3/master) to modify – if necessary – the content of the folder ***oligopoly*** contained into the
 folder ***6 objectSwarmObserverAgents_AESOP_turtleLib_NetworkX***.
 
-Then, from the main folder, we launch the *iRunShellOnline.ipynb* file, and finally we follow the instruction contained in it.
+Then, from the main folder, we launch the *iRunShellOnline.ipynb* file, and finally we follow the instructions contained in it.

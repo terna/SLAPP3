@@ -8,7 +8,8 @@ try:
 except BaseException:
     common.worldStateExist = False
 from ActionGroup import *
-import random
+if common.kernelUsesNumpyRandom: import numpy.random as random
+else: import random
 import os
 import numpy as np
 from mActions import *

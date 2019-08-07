@@ -1,6 +1,7 @@
-import random
 import os
 import commonVar as common
+if common.kernelUsesNumpyRandom: import numpy.random as random
+else: import random
 import inspect
 
 """

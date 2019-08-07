@@ -12,7 +12,7 @@
 
 def runSLAPP():
     global start_pyDir
-    print("\nSLAPP v3.3.1 build 20190516\n")
+    print("\nSLAPP v3.3.2 build 20190807\n")
     import os
 
     confirm = "n"
@@ -62,6 +62,15 @@ def runSLAPP():
             sys.path.append(pathAndProject)
 
         import commonVar as common
+        # if kernelUsesNumpyRandom is defined (True or False) in commonVar.py
+        # of the project, no other action is requested
+        try:
+            common.kernelUsesNumpyRandom
+        # if the definition is missing, we do it here
+        except BaseException:
+            common.kernelUsesNumpyRandom = False
+        #print("kernelUsesNumpyRandom =", common.kernelUsesNumpyRandom)
+
         import Tools as tl
         import graphicControl as gc
 
@@ -82,6 +91,7 @@ def runSLAPP():
             print("running in Python")
 
         import ObserverSwarm as obs
+
 
         # if debug is defined (True or False) in commonVar.py of the project, no
         # other action is requested

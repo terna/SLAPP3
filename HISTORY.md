@@ -397,3 +397,10 @@ improved oligopoly folder (version *6book*, with stable results in Mac and Linux
 eliminating the heavy files from the folder exampleGauss in oligopoly folder
 (version *6book*, with stable results in Mac and Linux); they are now at
 https://github.com/terna/oligopolyBookCasesGaussianValues
+
+(2019 08 07)
+
+3.3.2
+
+improvements in random number generation, look at Section "A note on random
+number generation" in the SLAPP_Reference_Handboo.pdf file

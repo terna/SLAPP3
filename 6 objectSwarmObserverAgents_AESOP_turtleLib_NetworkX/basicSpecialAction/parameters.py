@@ -4,7 +4,7 @@ from Tools import *
 
 def loadParameters(self):
 
-    # Projct version
+    # Project version
     try:
         projectVersion = str(common.projectVersion)
     except BaseException:

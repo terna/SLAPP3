@@ -38,6 +38,14 @@ class ObserverSwarm:
         #global cycle
         common.cycle = 1
 
+        # check if parameters.py in our project contains the INI feature
+        try:
+            ini
+            print("Congif parser for file INI found")
+            ini.readConfigFile()
+        except:
+            pass
+            
         loadParameters(self)  # a function, to which we pass self
 
         self.conclude = False

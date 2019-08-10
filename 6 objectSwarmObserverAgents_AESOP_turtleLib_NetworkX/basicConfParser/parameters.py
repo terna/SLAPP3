@@ -1,10 +1,11 @@
 # parameters.py
 from Tools import *
+import INIreader as ini
 
 
 def loadParameters(self):
 
-    # Project version
+    # Projct version
     try:
         projectVersion = str(common.projectVersion)
     except BaseException:

@@ -12,7 +12,7 @@
 
 def runSLAPP():
     global start_pyDir
-    print("\nSLAPP v3.3.2 build 20190807\n")
+    print("\nSLAPP v3.3.2 build 20190810\n")
     import os
 
     confirm = "n"

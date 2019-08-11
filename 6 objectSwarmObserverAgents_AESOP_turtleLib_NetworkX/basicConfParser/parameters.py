@@ -5,20 +5,21 @@ import INIreader as ini
 
 def loadParameters(self):
 
-    # Projct version
+    # Project version
     try:
         projectVersion = str(common.projectVersion)
     except BaseException:
         projectVersion = "Unknown"
     print("\nProject version " + projectVersion)
 
-    mySeed = eval(input("random number seed (1 to get it from the clock) "))
-    if mySeed == 1:
+    print ("random number seed (1 to get it from the clock) :", common.mySeed)
+    if common.mySeed == 1:
         random.seed()
     else:
-        random.seed(mySeed)
+        random.seed(common.mySeed)
 
-    self.nAgents = eval(input("How many 'bland' agents? "))
+    self.nAgents = common.nAgents
+    print("Employing",self.nAgents,"bland agent(s)")
 
     #self.worldXSize= input("X size of the world? ")
     self.worldXSize = 50
@@ -28,4 +29,5 @@ def loadParameters(self):
     self.worldYSize = 50
     print("Y size of the world? ", self.worldYSize)
 
-    self.nCycles = eval(input("How many cycles? (0 = exit) "))
+    self.nCycles = common.nCycles
+    print("Number of cycles (0 = exit) :", self.nCycles)

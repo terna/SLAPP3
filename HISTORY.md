@@ -403,4 +403,11 @@ https://github.com/terna/oligopolyBookCasesGaussianValues
 3.3.2
 
 improvements in random number generation, look at Section "A note on random
-number generation" in the SLAPP_Reference_Handboo.pdf file
+number generation" in the SLAPP_Reference_Handbook.pdf file
+
+(2019 08 11)
+
+3.3.3
+
+a new way to input the parameters, look at Section "An option: adopting the INI
+file format for parameter input" in the SLAPP_Reference_Handbook.pdf file

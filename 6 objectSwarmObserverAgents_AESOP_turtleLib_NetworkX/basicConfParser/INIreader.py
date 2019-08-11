@@ -30,6 +30,3 @@ def readConfigFile():
     common.nAgents      = config['project'].getint('nAgents')
     common.nCycles      = config['project'].getint('nCycles')
     common.toBeExecuted = config['project'].get('toBeExecuted')
-
-
-    #if len(selected)==1

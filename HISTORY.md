@@ -411,3 +411,12 @@ number generation" in the SLAPP_Reference_Handbook.pdf file
 
 a new way to input the parameters, look at Section "An option: adopting the INI
 file format for parameter input" in the SLAPP_Reference_Handbook.pdf file
+
+(2019 08 16)
+
+3.3.4
+
+introducing the capability of managing subfolders (within the project folders,
+with path of any length), containing the files specifying the agents' classes;
+look at Section "Having agent classes in subfolder: the project
+*basic2classesPathsToTypes*"

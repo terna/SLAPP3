@@ -420,3 +420,10 @@ introducing the capability of managing subfolders (within the project folders,
 with path of any length), containing the files specifying the agents' classes;
 look at Section "Having agent classes in subfolder: the project
 *basic2classesPathsToTypes*"
+
+(2020 03 26)
+
+3.3.5
+
+fixed an error in the choice of the project if, in presence of a predefined path,
+the reply was different from "n" or "y" or "Y" or "" (enter)

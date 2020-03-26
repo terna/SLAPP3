@@ -12,7 +12,7 @@
 
 def runSLAPP():
     global start_pyDir
-    print("\nSLAPP v3.3.4 build 20190819\n")
+    print("\nSLAPP v3.3.5 build 20200320\n")
     import os
 
     confirm = "n"
@@ -21,9 +21,9 @@ def runSLAPP():
     names1 = os.listdir("./")
     names2 = os.listdir("../")
     name = False
-    if "project.txt" in names1:
+    if "project.txt" in names1: #main folder
         name = "project.txt"
-    if "project.txt" in names2:
+    if "project.txt" in names2: # folder 6...
         name = "../project.txt"
     if name:
         currentProject = open(name, "r")
@@ -56,7 +56,7 @@ def runSLAPP():
     if found:
         import sys
         sys.path.append("./$$slapp$$")
-        if confirm == "n":
+        if confirm != "y" and confirm != "Y" and confirm != "":
             sys.path.append(project)
         else:
             sys.path.append(pathAndProject)

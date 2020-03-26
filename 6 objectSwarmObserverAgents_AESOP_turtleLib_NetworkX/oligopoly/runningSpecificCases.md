@@ -10,9 +10,9 @@ The default current case is the experiment 11.
 
 
 Versions of the key libraries:
-NetworkX 2.2
-matplotlib 3.0.2
-pandas 0.23.1
+NetworkX 2.4
+matplotlib 3.2.1
+pandas 0.25.3
 
 In case of Python errors, try to go back to these versions, using pip in the form
 

@@ -427,3 +427,5 @@ look at Section "Having agent classes in subfolder: the project
 
 fixed an error in the choice of the project if, in presence of a predefined path,
 the reply was different from "n" or "y" or "Y" or "" (enter)
+
+fixed an error in production project due to the new release of NetworX

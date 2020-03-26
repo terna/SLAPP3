@@ -47,7 +47,7 @@ class Agent(SuperAgent):
                       ' in production sector ', self.sector)
 
             common.g.add_node(self)
-            common.g.node[self]['sector'] = sector
+            common.g.nodes[self]['sector'] = sector
             gvf.colors[self] = "LightGray"
             # colors at http://www.w3schools.com/html/html_colornames.asp
             gvf.pos[self] = (xPos, yPos)

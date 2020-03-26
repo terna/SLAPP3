@@ -45,7 +45,7 @@ def createGraph():
 def findNodesFromSector(sector):
     nodeList = []
     for aNode in common.g.nodes():
-        if common.g.node[aNode]['sector'] == sector:
+        if common.g.nodes[aNode]['sector'] == sector:
             nodeList.append(aNode)
     return nodeList
 

@@ -428,4 +428,12 @@ look at Section "Having agent classes in subfolder: the project
 fixed an error in the choice of the project if, in presence of a predefined path,
 the reply was different from "n" or "y" or "Y" or "" (enter)
 
-fixed an error in production project due to the new release of NetworX
+fixed an error in production project due to the new release of NetworkX
+
+(2020 04 03)
+
+3.3.6
+
+changes in oligopoly project with: better myGauss functioning; nicer first time series
+graphic; more robust initial input cell reactions in case of wrong replies, such as
+empty reply or blanks when a content is mandatory

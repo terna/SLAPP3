@@ -4,7 +4,7 @@ The final rows of Appendix C of the book recall this file.
 
 
 
-*Running Oligopoy project*
+*Running Oligopoly projects*
 
 The default current case is the experiment 11.
 
@@ -32,8 +32,9 @@ To set the correct parameters, for the cases *0a* and *0b**, you can simply modi
 
 The path to the folder containing the Oligopoly code has to be included in a file named *project.txt*, to be placed into the main folder os SLAPP.
 
-**For all the cases below**, please use the Oligopoly code of the release V6book, or directly the branch master, running the project with SLAPP 3.0 or higher,
-which is at [https://github.com/terna/SLAPP3](https://github.com/terna/SLAPP3).
+**For all the cases below**, please use the Oligopoly code of the release V6book or higher,
+or directly the branch master, running the project with SLAPP 3.0 or higher,
+as at [https://github.com/terna/SLAPP3](https://github.com/terna/SLAPP3).
 
 As above, the path to the folder containing the Oligopoly code has to be included in a file named *project.txt*, to be placed into the main folder of SLAPP.
 

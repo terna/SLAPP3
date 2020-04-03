@@ -89,7 +89,10 @@ def loadParameters(self):
         "sigma of the normal distribution used in randomizing the position of the agents/nodes ",
         common.sigma)
 
-    mySeed = eval(input("random number seed (1 to get it from the clock) "))
+    mySeed = ""
+    while mySeed=="" or mySeed[0]==" ":
+        mySeed = input("random number seed (1 to get it from the clock) ")
+    mySeed=eval(mySeed)
     if mySeed == 1:
         random.seed()
         npr.seed()
@@ -420,10 +423,12 @@ def loadParameters(self):
                         common.quasiHchoice)  # saving pars
 
     # Max quota (base 1) of the consumption in each sub step of a cycle
-    print("\nMax quota (base 1) of the consumptions in each sub step of a cycle\n")
-    common.consumptionQuota = eval(input(\
-                      "(enter any value in a non-hayekian simulation): "))
-
+    print("\nMax quota (base 1) of the consumptions in each sub step of a cycle")
+    common.consumptionQuota=""
+    while common.consumptionQuota=="" or common.consumptionQuota[0]==" ":
+        common.consumptionQuota = input(\
+                      "(enter any value in a non-hayekian simulation): ")
+    common.consumptionQuota = eval(common.consumptionQuota)
     dataFrameAppend("consumptionQuota",
                         "Max quota (b. 1) of the cons. in each sub step of a cycle",
                         common.consumptionQuota)  # saving pars
@@ -433,9 +438,13 @@ def loadParameters(self):
     # t==-1; the quota of the quantity at t==-2 is (1 - Q)
     print(\
      "\nQuota (0 <= Q <= 1) of the consumption quantities in hayekian phase")
-    common.Q = eval(input(\
+    common.Q = ""
+    while common.Q == "" or common.Q[0]==" ":
+         common.Q = input(\
      "(Q is the weight of the quantity at t==-1;\n(1 - Q) is the weight "+\
-     "of the quantity at t==-2: "))
+     "of the quantity at t==-2: "+\
+     "\n(enter any value in a non-hayekian simulation): ")
+    common.Q = eval(common.Q)
     if common.Q < 0 or common.Q > 1:
         print("out of range (0 <= Q <= 1)")
         os.sys.exit(1)
@@ -447,8 +456,10 @@ def loadParameters(self):
 
 
     # cycles
-    self.nCycles = eval(input("How many cycles? (0 = exit) "))
-
+    self.nCycles = ""
+    while self.nCycles == "" or self.nCycles[0] ==" ":
+        self.nCycles = input("How many cycles? (0 = exit) ")
+    self.nCycles = eval(self.nCycles)
     dataFrameAppend("nCycles","# of cycles", self.nCycles)  # saving par
 
     v = input("verbose? (y/[n]) ")

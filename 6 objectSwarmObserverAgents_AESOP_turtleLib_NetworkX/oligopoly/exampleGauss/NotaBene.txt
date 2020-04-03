@@ -1,1 +1,1 @@
-The file are online at https://github.com/terna/oligopolyBookCasesGaussianValues (the myGauss.py class can read them there) or saved at https://github.com/terna/oligopoly (in case, the myGauss.py class reads them there).
+The file are both online at https://github.com/terna/oligopolyBookCasesGaussianValues (the myGauss.py class can read them there) or saved at https://github.com/terna/oligopoly (if you copy locally the full oligopoly folder and run the project from there, the myGauss.py uses that local copies).

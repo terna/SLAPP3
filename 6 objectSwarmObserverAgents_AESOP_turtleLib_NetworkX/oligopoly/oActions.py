@@ -7,6 +7,8 @@ import commonVar as common
 import pandas as pd
 import parameters as par
 import numpy as np
+import warnings
+warnings.filterwarnings("ignore")
 
 # to eliminate an annoying warning at time 1 in time series plot
 import warnings
@@ -245,12 +247,13 @@ def visualizePlot():
         # the and not is about ipython running in a terminal
         f2 = gvf.plt.figure()
         myax = f2.gca()
-        # myax.set_autoscale_on(True)
+        #myax.set_autoscale_on(True)
         gvf.plt.title('Time Series')
 
         ts_dfOut = common.ts_df
         # set index to start from 1
         ts_dfOut.index += 1
+
         myPlot = ts_dfOut.plot(
             secondary_y=[
                 #'hPriceSd',
@@ -265,7 +268,7 @@ def visualizePlot():
                 "lightblue",
                 "Pink",
                 "Gray",
-                "Brown"],
+                "Brown"],xlim=[0.9,common.cycle+0.1],
             ax=myax)
         myPlot.set_ylabel(
 'unemployed, totalProfit, totalProduction, plannedProduction, consumptionQ, hPSd')

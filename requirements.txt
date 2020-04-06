@@ -6,3 +6,4 @@ pandas
 scipy
 statsmodels
 patsy
+requests

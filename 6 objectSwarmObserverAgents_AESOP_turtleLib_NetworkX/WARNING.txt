@@ -2,3 +2,5 @@ Required libraries
 
 To use the schedule.xls file it is necessary to install
 the Python lib xlrd, which is at http://pypi.python.org/pypi/xlrd
+
+Look also to requirements.txt file in the main folder

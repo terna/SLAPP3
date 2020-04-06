@@ -14,6 +14,5 @@ it is necessary to install
 pandas which is at http://pandas.pydata.org
 
 NB
-NetworkX 1.9.1 or greater required
-
-matplotlib 1.5.1 suggested
+NetworkX and matplotlib versions specified in file runningSpecificCases.md into oligopoly project
+folder

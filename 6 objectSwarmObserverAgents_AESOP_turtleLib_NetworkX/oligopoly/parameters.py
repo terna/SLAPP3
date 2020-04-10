@@ -12,6 +12,14 @@ import pandas as pd
 import numpy as np
 import sys
 
+def fInput(label):
+    x = ""
+    while x=="" or " " in x:
+        x = input(label)
+        try: xR=eval(x) # "" case fails here
+        except: x=""
+    return xR
+
 
 def loadParameters(self):
 
@@ -89,10 +97,8 @@ def loadParameters(self):
         "sigma of the normal distribution used in randomizing the position of the agents/nodes ",
         common.sigma)
 
-    mySeed = ""
-    while mySeed=="" or mySeed[0]==" ":
-        mySeed = input("random number seed (1 to get it from the clock) ")
-    mySeed=eval(mySeed)
+    mySeed = fInput("random number seed (1 to get it from the clock) ")
+
     if mySeed == 1:
         random.seed()
         npr.seed()
@@ -424,11 +430,8 @@ def loadParameters(self):
 
     # Max quota (base 1) of the consumption in each sub step of a cycle
     print("\nMax quota (base 1) of the consumptions in each sub step of a cycle")
-    common.consumptionQuota=""
-    while common.consumptionQuota=="" or common.consumptionQuota[0]==" ":
-        common.consumptionQuota = input(\
-                      "(enter any value in a non-hayekian simulation): ")
-    common.consumptionQuota = eval(common.consumptionQuota)
+    common.consumptionQuota=fInput("(enter any value in a non-hayekian simulation): ")
+
     dataFrameAppend("consumptionQuota",
                         "Max quota (b. 1) of the cons. in each sub step of a cycle",
                         common.consumptionQuota)  # saving pars
@@ -438,13 +441,10 @@ def loadParameters(self):
     # t==-1; the quota of the quantity at t==-2 is (1 - Q)
     print(\
      "\nQuota (0 <= Q <= 1) of the consumption quantities in hayekian phase")
-    common.Q = ""
-    while common.Q == "" or common.Q[0]==" ":
-         common.Q = input(\
-     "(Q is the weight of the quantity at t==-1;\n(1 - Q) is the weight "+\
-     "of the quantity at t==-2: "+\
-     "\n(enter any value in a non-hayekian simulation): ")
-    common.Q = eval(common.Q)
+    common.Q = fInput("(Q is the weight of the quantity at t==-1;\n(1 - Q) is the weight "+\
+                      "of the quantity at t==-2: "+\
+                      "\n(enter any value in a non-hayekian simulation): ")
+
     if common.Q < 0 or common.Q > 1:
         print("out of range (0 <= Q <= 1)")
         os.sys.exit(1)
@@ -456,10 +456,8 @@ def loadParameters(self):
 
 
     # cycles
-    self.nCycles = ""
-    while self.nCycles == "" or self.nCycles[0] ==" ":
-        self.nCycles = input("How many cycles? (0 = exit) ")
-    self.nCycles = eval(self.nCycles)
+    self.nCycles = fInput("How many cycles? (0 = exit) ")
+
     dataFrameAppend("nCycles","# of cycles", self.nCycles)  # saving par
 
     v = input("verbose? (y/[n]) ")

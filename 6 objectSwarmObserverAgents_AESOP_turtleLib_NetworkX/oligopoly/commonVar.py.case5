@@ -3,7 +3,7 @@ import os
 
 projectVersion = "6b"
 
-case = "5" #post book
+case = "5" # if missing, use ""
 
 fgIn=fgOu=None # used in myGauss.py
 

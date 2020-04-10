@@ -14,6 +14,8 @@ NetworkX 2.4
 matplotlib 3.2.1
 pandas 0.25.3
 
+Other library are specified in the requirements.txt file of the SLAPP3 main folder
+
 In case of Python errors, try to go back to these versions, using pip in the form
 
 pip uninstall specificLib && pip install specificLib==versionNumber

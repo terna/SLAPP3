@@ -7,11 +7,11 @@ build = "20190511"
 
 debug = False
 
-case = "9"
+case = "9" # if missing, use ""
 
 fgIn=fgOu=None # used in myGauss.py
 
-# function for the management of the paramenters
+# function for the management of the parameters
 def setVar():
     #print(nameValues)
     globals().update(nameValues)

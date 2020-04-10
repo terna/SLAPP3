@@ -291,7 +291,23 @@ def visualizePlot():
 def saveData():
 
     if common.fgIn!=None: common.fgIn.close()
-    if common.fgOu!=None: common.fgOu.close()
+    #closing fgOu
+    if common.fgOu != "":
+        common.fgOu.close()
+        import zipfile
+        compression = zipfile.ZIP_DEFLATED
+        print("creating the archive "+common.case+".txt.zip in folder "+common.project+\
+              "/exampleGauss/")
+        z = zipfile.ZipFile(common.project+"/exampleGauss/"+common.case+".txt.zip", mode='w')
+        z.write(common.project+"/exampleGauss/"+common.case+".txt",arcname=common.case+".txt",\
+                compress_type=compression)
+        print('zip compressed')
+
+        import os
+        print("removing file "+common.case+".txt from folder "+common.project+\
+              "/exampleGauss/")
+        os.remove(common.project+"/exampleGauss/"+common.case+".txt")
+
     # used in myGauss.py
 
 

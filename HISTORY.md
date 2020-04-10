@@ -437,3 +437,12 @@ fixed an error in production project due to the new release of NetworkX
 changes in oligopoly project with: better myGauss functioning; nicer first time series
 graphic; more robust initial input cell reactions in case of wrong replies, such as
 empty reply or blanks when a content is mandatory
+
+(2020 04 10)
+
+3.3.7
+
+again, changes in oligopoly project with: better myGauss functioning, avoiding LFS tool
+for large files and adopting zip files; nicer time=1 series graphic; more and more robust
+initial input cell reactions in case of wrong replies, such as empty reply or blanks
+when a content is mandatory

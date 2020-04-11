@@ -12,7 +12,7 @@
 
 def runSLAPP():
     global start_pyDir
-    print("\nSLAPP v3.3.7 build 20200410\n")
+    print("\nSLAPP v3.3.8 build 20200411\n")
     import os
 
     confirm = "n"
@@ -46,9 +46,12 @@ def runSLAPP():
     if confirm == "y" or confirm == "Y" or confirm == "":
         project = pathAndProject
     else:
-        project = input("Project name? ")
-        if project not in names1:
-            print("Project " + project + " not found")
+        p=None
+        while p==None:
+            project = input("Project name? ")
+            if project not in names1:
+                print("Project " + project + " not found")
+            else: p=project
         else:
             found = True
             project = "./" + project

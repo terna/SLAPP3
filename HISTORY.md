@@ -446,3 +446,9 @@ again, changes in oligopoly project with: better myGauss functioning, avoiding L
 for large files and adopting zip files; nicer time=1 series graphic; more and more robust
 initial input cell reactions in case of wrong replies, such as empty reply or blanks
 when a content is mandatory
+
+(2020 04 11)
+
+3.3.8
+
+small correction in oligopoly project to avoid a final error and improvement of the SLAPP message inquiring for the project name

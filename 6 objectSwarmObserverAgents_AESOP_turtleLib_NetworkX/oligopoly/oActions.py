@@ -292,7 +292,7 @@ def saveData():
 
     if common.fgIn!=None: common.fgIn.close()
     #closing fgOu
-    if common.fgOu != "":
+    if common.fgOu != None:
         common.fgOu.close()
         import zipfile
         compression = zipfile.ZIP_DEFLATED

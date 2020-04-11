@@ -1,6 +1,7 @@
 # Oligopoly
-(readme build 20200410)
+(build 20200411)
 
+**Stay tuned**: new 6b version with takeover actions under development.
 
 Marco Mazzoli, Matteo Morini, and Pietro Terna
 

@@ -1,6 +1,7 @@
 #display2d.py for the basic3D project
 import matplotlib.pyplot as plt
 import mpl_toolkits.mplot3d.axes3d as p3
+import numpy as np
 
 def checkRunningInIPython():
     try:
@@ -40,15 +41,18 @@ def display3D(agentList, cycle, nCycles, sleep):
         ax.set_zlim(agentList[0].bZ, agentList[0].tZ)
 
     # update data from the agents' world
-    xList=[]
-    yList=[]
-    zList=[]
+    #with matplotlib 3.3.2 set_3d_properties requires vectors with shape so we need to use
+    # the numpy arrasy structure
+    l=len(agentList)
+    xList=np.array([0.0]*l)
+    yList=np.array([0.0]*l)
+    zList=np.array([0.0]*l)
 
     for i in range(len(agentList)):
         x,y,z=agentList[i].reportPos()
-        xList.append(x)
-        yList.append(y)
-        zList.append(z)
+        xList[i]=x
+        yList[i]=y
+        zList[i]=z
 
     if IPy:
         dots[0].set_data(xList, yList)

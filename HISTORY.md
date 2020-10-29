@@ -452,3 +452,9 @@ when a content is mandatory
 3.3.8
 
 small correction in oligopoly project to avoid a final error and improvement of the SLAPP message inquiring for the project name
+
+(2020 04 11)
+
+3.3.8
+
+corrections in basic3D project for compatibility with matplotlib 3.3.2

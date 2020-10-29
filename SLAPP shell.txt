@@ -15,7 +15,7 @@ Then, from the main folder of SLAPP, run
 
 python runShell.py
 
-and chose one of the three project examples:
+and chose one of the three project examples. The following are examples:
 
 basic
 
